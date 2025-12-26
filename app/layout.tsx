@@ -13,8 +13,41 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vivek Upasani",
-  description: "Portfolio website of Vivek Upasani, a software developer specializing in web development and mobile app development.",
+  title: {
+    default: "Vivek Upasani",
+    template: "%s | Vivek Upasani",
+  },
+  description: "Portfolio of Vivek Upasani, a Full Stack Developer and Freelancer building Cluezy.",
+  keywords: ["Vivek Upasani", "Software Developer", "Freelancer", "Full Stack Developer", "Next.js", "React", "TypeScript", "Cluezy", "cluezy"],
+  authors: [{ name: "Vivek Upasani", url: "https://founder.cluezy.site" }],
+  creator: "Vivek Upasani",
+  metadataBase: new URL("https://founder.cluezy.site"),
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://founder.cluezy.site",
+    title: "Vivek Upasani",
+    description: "Portfolio of Vivek Upasani, a Full Stack Developer and Freelancer building Cluezy.",
+    siteName: "Vivek Upasani",
+    images: [
+      {
+        url: "/opengraph-image1.png",
+        width: 1200,
+        height: 630,
+        alt: "Vivek Upasani",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vivek Upasani",
+    description: "Portfolio of Vivek Upasani, a Full Stack Developer and Freelancer building Cluezy.",
+    images: ["/opengraph-image1.png"],
+    creator: "@v1vekupasani",
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

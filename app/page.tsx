@@ -50,7 +50,15 @@ export default function Home() {
 
         <div className="mt-12">
           <Title title="currently" />
-          <p className="mt-3 text-zinc-600 leading-relaxed">I’m a freelance full-stack developer, and when I’m not coding for clients, I’m building Cluezy my own agentic ai project.</p>
+          <p className="mt-3 text-zinc-600 leading-relaxed">
+            I’m currently working as a freelance full-stack developer, and when I’m not coding for clients, I’m building
+            {" "}
+            <Link href="https://cluezy.site" target="_blank" className="text-blue-600 hover:underline hover:text-blue-700 transition-colors font-medium">
+              @cluezy
+            </Link>
+            {" "}
+            my own agentic ai research engine.
+          </p>
         </div>
 
         <div className="mt-12">
