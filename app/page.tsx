@@ -11,19 +11,19 @@ export default function Home() {
     <section className="bg-zinc-50 text-zinc-900">
       <div className="flex flex-col min-h-screen font-sans py-12 px-6 md:px-0 max-w-2xl mx-auto">
         <div className="flex gap-4 p-1">
-          <Link href="" target="_blank" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
+          <Link href="https://x.com/v1vekupasani" target="_blank" className="text-blue-600 hover:underline hover:text-blue-700 transition-colors font-medium">
             twitter
           </Link>
           //
-          <Link href="" target="_blank" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
+          <Link href="https://github.com/vivekupasani" target="_blank" className="text-blue-600 hover:underline hover:text-blue-700 transition-colors font-medium">
             github
           </Link>
           //
-          <Link href="" target="_blank" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
+          <Link href="https://linkedin.com/in/vivekupasani" target="_blank" className="text-blue-600 hover:underline hover:text-blue-700 transition-colors font-medium">
             linkedin
           </Link>
           //
-          <Link href="" target="_blank" className="text-blue-600 hover:text-blue-700 transition-colors font-medium">
+          <Link href="https://instagram.com/v1vekupasani" target="_blank" className="text-blue-600 hover:underline hover:text-blue-700 transition-colors font-medium">
             instagram
           </Link>
         </div>
@@ -45,7 +45,7 @@ export default function Home() {
 
         <div className="mt-12">
           <Title title="currently" />
-          <p className="mt-3 text-zinc-600 leading-relaxed">I'm working as a freelance full stack developer and in free time building cluezy.</p>
+          <p className="mt-3 text-zinc-600 leading-relaxed">I’m a freelance full-stack developer, and when I’m not coding for clients, I’m building Cluezy my own agentic ai project.</p>
         </div>
 
         <div className="mt-12">
@@ -72,11 +72,11 @@ export default function Home() {
 
         <div className="mt-16 flex flex-wrap gap-x-1 gap-y-1 text-zinc-500">
           <p>if you want to see more of my work, you can check out my</p>
-          <Link href="" className="text-blue-600 hover:text-blue-700 transition-colors font-medium underline decoration-zinc-300 underline-offset-2">
+          <Link href="https://x.com/v1vekupasani" className="text-blue-600 hover:text-blue-700 transition-colors font-medium underline decoration-zinc-300 underline-offset-2">
             twitter
           </Link>
           or
-          <Link href="" className="text-blue-600 hover:text-blue-700 transition-colors font-medium underline decoration-zinc-300 underline-offset-2">
+          <Link href="https://github.com/vivekupasani" className="text-blue-600 hover:text-blue-700 transition-colors font-medium underline decoration-zinc-300 underline-offset-2">
             github
           </Link>
         </div>
