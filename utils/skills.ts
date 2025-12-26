@@ -1,0 +1,22 @@
+export const Skills = [
+    "typescript",
+    "javascript",
+    "next.js",
+    "react.js",
+    "flutter",
+    "react native",
+    "node.js",
+    "express.js",
+    "firebase",
+    "supabase",
+    "mongo db",
+    "mysql",
+    "motion",
+    "tailwind css",
+    "shadcn",
+    "git",
+    "github",
+    "vscode",
+    "antigravity",
+    "cursor"
+]

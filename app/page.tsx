@@ -2,6 +2,7 @@ import { ProjectTile } from "@/components/Project";
 import { Title } from "@/components/Title";
 import { WorkedAt } from "@/components/WorkedAt";
 import { ProjectList } from "@/utils/projects";
+import { Skills } from "@/utils/skills";
 import { WorkList } from "@/utils/work";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,7 +11,7 @@ export default function Home() {
   return (
     <section className="bg-zinc-50 text-zinc-900">
       <div className="flex flex-col min-h-screen font-sans py-12 px-6 md:px-0 max-w-2xl mx-auto">
-        <div className="flex gap-4 p-1">
+        <div className="flex gap-4 p-1 flex-wrap">
           <Link href="https://x.com/v1vekupasani" target="_blank" className="text-blue-600 hover:underline hover:text-blue-700 transition-colors font-medium">
             twitter
           </Link>
@@ -22,6 +23,10 @@ export default function Home() {
           <Link href="https://linkedin.com/in/vivekupasani" target="_blank" className="text-blue-600 hover:underline hover:text-blue-700 transition-colors font-medium">
             linkedin
           </Link>
+          //
+          <a href="mailto:vivekupasani984@gmail.com" target="_blank" className="text-blue-600 hover:underline hover:text-blue-700 transition-colors font-medium">
+            email
+          </a>
           //
           <Link href="https://instagram.com/v1vekupasani" target="_blank" className="text-blue-600 hover:underline hover:text-blue-700 transition-colors font-medium">
             instagram
@@ -70,12 +75,30 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-wrap gap-x-1 gap-y-1 text-zinc-500">
-          <p>if you want to see more of my work, you can check out my</p>
+        <div className="mt-12 w-full">
+          <Title title="skills" />
+          <div className="flex flex-wrap gap-3 mt-4">
+            {
+              Skills.map((skill, idx) => (
+                <div key={idx} className="flex gap-2 items-center justify-center">
+                  <p>{skill}</p>
+                  {
+                    idx < Skills.length - 1 && (
+                      <p>•</p>
+                    )
+                  }
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <div className="mt-16 text-zinc-500">
+          if you want to see more of my work, you can check out my{" "}
           <Link href="https://x.com/v1vekupasani" className="text-blue-600 hover:text-blue-700 transition-colors font-medium underline decoration-zinc-300 underline-offset-2">
             twitter
-          </Link>
-          or
+          </Link>{" "}
+          or{" "}
           <Link href="https://github.com/vivekupasani" className="text-blue-600 hover:text-blue-700 transition-colors font-medium underline decoration-zinc-300 underline-offset-2">
             github
           </Link>
