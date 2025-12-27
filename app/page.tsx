@@ -1,117 +1,178 @@
+"use client";
+
+import { motion, Variants } from "motion/react";
+import Image from "next/image";
+import Link from "next/link";
+
 import { ProjectTile } from "@/components/Project";
 import { Title } from "@/components/Title";
 import { WorkedAt } from "@/components/WorkedAt";
 import { ProjectList } from "@/utils/projects";
 import { Skills } from "@/utils/skills";
 import { WorkList } from "@/utils/work";
-import Image from "next/image";
-import Link from "next/link";
+import { Verified } from "lucide-react";
+
+/* ------------------ Animations ------------------ */
+
+const container: Variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.08,
+      delayChildren: 0.15,
+    },
+  },
+};
+
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 12, filter: "blur(6px)" },
+  show: {
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+};
+
+const hoverLift = {
+  whileHover: { y: -2, scale: 1.03 },
+  transition: { type: "spring", stiffness: 300 },
+};
+
+/* ------------------ Page ------------------ */
 
 export default function Home() {
   return (
     <section className="bg-zinc-50 text-zinc-900">
-      <div className="flex flex-col min-h-screen font-sans py-12 px-6 md:px-0 max-w-2xl mx-auto">
-        <div className="flex gap-4 p-1 flex-wrap">
-          <Link href="https://x.com/v1vekupasani" target="_blank" className="text-blue-600 hover:underline hover:text-blue-700 transition-colors font-medium">
-            twitter
-          </Link>
-          //
-          <Link href="https://github.com/vivekupasani" target="_blank" className="text-blue-600 hover:underline hover:text-blue-700 transition-colors font-medium">
-            github
-          </Link>
-          //
-          <Link href="https://linkedin.com/in/vivekupasani" target="_blank" className="text-blue-600 hover:underline hover:text-blue-700 transition-colors font-medium">
-            linkedin
-          </Link>
-          //
-          <a href="mailto:vivekupasani984@gmail.com" target="_blank" className="text-blue-600 hover:underline hover:text-blue-700 transition-colors font-medium">
-            email
-          </a>
-          //
-          <Link href="https://instagram.com/v1vekupasani" target="_blank" className="text-blue-600 hover:underline hover:text-blue-700 transition-colors font-medium">
-            instagram
-          </Link>
-        </div>
+      <motion.div
+        variants={container}
+        initial="hidden"
+        animate="show"
+        className="flex flex-col min-h-screen font-sans py-12 px-6 md:px-0 max-w-2xl mx-auto"
+      >
+        {/* Social Links */}
+        <motion.div variants={fadeUp} className="flex gap-4 flex-wrap">
+          {[
+            ["twitter", "https://x.com/v1vekupasani"],
+            ["github", "https://github.com/vivekupasani"],
+            ["linkedin", "https://linkedin.com/in/vivekupasani"],
+            ["email", "mailto:vivekupasani984@gmail.com"],
+            ["instagram", "https://instagram.com/v1vekupasani"],
+          ].map(([label, link]) => (
+            <motion.a
+              href={link}
+              target="_blank"
+              className="text-blue-600 font-medium hover:underline"
+              whileHover={{ y: -2, scale: 1.03 }}
+              transition={{ type: "spring" as const, stiffness: 300 }}
+            >
+              {label}
+            </motion.a>
+          ))}
+        </motion.div>
 
-        <div className="mt-12">
-          <div className="relative">
-            <Image
-              src="/me.jpg"
-              alt="vivek upasani"
-              height={64}
-              width={64}
-              className="rounded-full object-cover border border-zinc-200"
-            />
-          </div>
+        {/* Profile */}
+        <motion.div variants={fadeUp} className="mt-12">
+          <Image
+            src="/me.jpg"
+            alt="Vivek Upasani"
+            width={64}
+            height={64}
+            className="rounded-full border border-zinc-200"
+          />
 
-          <h1 className="text-2xl font-semibold mt-4 text-zinc-900">vivek upasani</h1>
-          <p className="mt-1 text-zinc-600">software developer & freelancer</p>
-        </div>
+          <h1 className="text-2xl font-semibold mt-4">vivek upasani
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 48 48" className="inline-block ml-1 mb-1">
+              <polygon fill="#42a5f5" points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"></polygon><polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"></polygon>
+            </svg>
+          </h1>
+          <p className="text-zinc-600 mt-1">software developer & freelancer</p>
+        </motion.div>
 
-        <div className="mt-12">
+        {/* Currently */}
+        <motion.div variants={fadeUp} className="mt-12">
           <Title title="currently" />
           <p className="mt-3 text-zinc-600 leading-relaxed">
-            I’m currently working as a freelance full-stack developer, and when I’m not coding for clients, I’m building
-            {" "}
-            <Link href="https://cluezy.site" target="_blank" className="text-blue-600 hover:underline hover:text-blue-700 transition-colors font-medium">
+            I’m currently working as a freelance full-stack developer, and
+            building{" "}
+            <Link
+              href="https://cluezy.site"
+              className="text-blue-600 hover:underline font-medium"
+              target="_blank"
+            >
               @cluezy
             </Link>
-            {" "}
-            my own agentic ai research engine.
+            , my own agentic AI research engine.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="mt-12">
+        {/* Work */}
+        <motion.div variants={fadeUp} className="mt-12">
           <Title title="where i've worked" />
-          <div className="flex flex-col gap-2 mt-4">
-            {
-              WorkList.map((work, idx) => (
-                <WorkedAt key={idx} companyName={work.companyName} imageSrc={work.imageSrc} role={work.role} link={work.link} />
-              ))
-            }
+          <div className="flex flex-col gap-3 mt-4">
+            {WorkList.map((work, idx) => (
+              <WorkedAt
+                key={idx}
+                companyName={work.companyName}
+                imageSrc={work.imageSrc}
+                role={work.role}
+                link={work.link}
+              />
+            ))}
           </div>
-        </div>
+        </motion.div>
 
-        <div className="mt-12 w-full">
+        {/* Projects */}
+        <motion.div variants={fadeUp} className="mt-12">
           <Title title="work" />
           <div className="flex flex-col gap-3 mt-4">
-            {
-              ProjectList.map((work, idx) => (
-                <ProjectTile key={idx} projectName={work.projectName} imageSrc={work.imageSrc} desc={work.desc} link={work.link} />
-              ))
-            }
+            {ProjectList.map((project, idx) => (
+              <ProjectTile
+                key={idx}
+                projectName={project.projectName}
+                imageSrc={project.imageSrc}
+                desc={project.desc}
+                link={project.link}
+              />
+            ))}
           </div>
-        </div>
+        </motion.div>
 
-        <div className="mt-12 w-full">
+        {/* Skills */}
+        <motion.div variants={fadeUp} className="mt-12">
           <Title title="skills" />
           <div className="flex flex-wrap gap-3 mt-4">
-            {
-              Skills.map((skill, idx) => (
-                <div key={idx} className="flex gap-2 items-center justify-center">
-                  <p>{skill}</p>
-                  {
-                    idx < Skills.length - 1 && (
-                      <p>•</p>
-                    )
-                  }
-                </div>
-              ))
-            }
+            {Skills.map((skill, idx) => (
+              <span key={idx} className="text-sm text-zinc-700">
+                {skill}
+                {idx !== Skills.length - 1 && " •"}
+              </span>
+            ))}
           </div>
-        </div>
+        </motion.div>
 
-        <div className="mt-16 text-zinc-500">
-          if you want to see more of my work, you can check out my{" "}
-          <Link href="https://x.com/v1vekupasani" className="text-blue-600 hover:text-blue-700 transition-colors font-medium underline decoration-zinc-300 underline-offset-2">
+        {/* Footer */}
+        <motion.div
+          variants={fadeUp}
+          className="mt-16 text-zinc-500 text-sm"
+        >
+          if you want to see more of my work, check my{" "}
+          <Link
+            href="https://x.com/v1vekupasani"
+            className="text-blue-600 underline"
+          >
             twitter
           </Link>{" "}
           or{" "}
-          <Link href="https://github.com/vivekupasani" className="text-blue-600 hover:text-blue-700 transition-colors font-medium underline decoration-zinc-300 underline-offset-2">
+          <Link
+            href="https://github.com/vivekupasani"
+            className="text-blue-600 underline"
+          >
             github
           </Link>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }
