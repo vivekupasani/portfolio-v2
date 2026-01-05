@@ -22,7 +22,7 @@ export const ProjectTile = ({
         <MotionLink
             href={link}
             target="_blank"
-            className="flex flex-col gap-1 px-3 -mx-3 py-2 rounded-lg border border-transparent hover:border-zinc-200 hover:bg-zinc-50 transition-colors group"
+            className="flex flex-col gap-1 px-3 -mx-3 py-2 rounded-lg border border-transparent  hover:bg-zinc-50 transition-colors group"
             whileHover={{ y: -2 }}
             transition={{ type: "spring" as const, stiffness: 280 }}
         >
@@ -31,21 +31,22 @@ export const ProjectTile = ({
                     <Image
                         src={imageSrc}
                         alt={projectName}
-                        height={25}
-                        width={25}
-                        className="h-6.25 w-6.25 rounded-full border border-zinc-200"
+                        height={35}
+                        width={35}
+                        className="h-[35px] w-[35px] rounded-full border border-zinc-200"
                     />
-                    <span className="font-medium text-zinc-900 group-hover:text-blue-600 transition-colors">
-                        {projectName}
-                    </span>
+                    <div className="flex flex-col">
+                        <span className="font-medium text-zinc-900 group-hover:text-blue-600 transition-colors">
+                            {projectName}
+                        </span>
+                        <p className="text-sm text-zinc-500 leading-normal">
+                            {desc}
+                        </p>
+                    </div>
                 </div>
 
                 <ArrowUpRight className="size-4 text-zinc-400 group-hover:text-blue-500 transition-colors" />
             </div>
-
-            <p className="text-sm text-zinc-500 leading-normal pl-8">
-                {desc}
-            </p>
         </MotionLink>
     );
 };
