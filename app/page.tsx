@@ -10,7 +10,6 @@ import { WorkedAt } from "@/components/WorkedAt";
 import { ProjectList } from "@/utils/projects";
 import { Skills } from "@/utils/skills";
 import { WorkList } from "@/utils/work";
-import { Verified } from "lucide-react";
 
 /* ------------------ Animations ------------------ */
 
@@ -19,85 +18,106 @@ const container: Variants = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.08,
-      delayChildren: 0.15,
+      staggerChildren: 0.06,
+      delayChildren: 0.1,
     },
   },
 };
 
 const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 12, filter: "blur(6px)" },
+  hidden: { opacity: 0, y: 16, filter: "blur(8px)" },
   show: {
     opacity: 1,
     y: 0,
     filter: "blur(0px)",
-    transition: { duration: 0.5, ease: "easeOut" },
+    transition: { duration: 0.55, ease: [0.25, 0.46, 0.45, 0.94] },
   },
 };
 
-const hoverLift = {
-  whileHover: { y: -2, scale: 1.03 },
-  transition: { type: "spring", stiffness: 300 },
-};
+/* ---- Social config ---- */
+const socials = [
+  { label: "twitter", href: "https://x.com/v1vekupasani" },
+  { label: "github", href: "https://github.com/vivekupasani" },
+  { label: "linkedin", href: "https://linkedin.com/in/vivekupasani" },
+  { label: "gmail", href: "mailto:vivekupasani984@gmail.com" },
+  { label: "instagram", href: "https://instagram.com/v1vekupasani" },
+];
 
 /* ------------------ Page ------------------ */
 
 export default function Home() {
   return (
-    <section className="bg-zinc-50 text-zinc-900">
+    <section className="bg-zinc-50 text-zinc-900 min-h-svh">
       <motion.div
         variants={container}
         initial="hidden"
         animate="show"
-        className="flex flex-col min-h-screen font-sans py-12 px-6 md:px-0 max-w-2xl mx-auto"
+        className="flex flex-col font-sans py-10 px-6 md:px-0 max-w-xl mx-auto"
       >
-        {/* Social Links */}
-        <motion.div variants={fadeUp} className="flex gap-4 flex-wrap">
-          {[
-            ["twitter", "https://x.com/v1vekupasani"],
-            ["github", "https://github.com/vivekupasani"],
-            ["linkedin", "https://linkedin.com/in/vivekupasani"],
-            ["email", "mailto:vivekupasani984@gmail.com"],
-            ["instagram", "https://instagram.com/v1vekupasani"],
-          ].map(([label, link]) => (
-            <motion.a
-              href={link}
-              target="_blank"
-              className="text-blue-600 font-medium hover:underline"
-              whileHover={{ y: -2, scale: 1.03 }}
-              transition={{ type: "spring" as const, stiffness: 300 }}
-            >
-              {label}
-            </motion.a>
-          ))}
-        </motion.div>
+        {/* ── Status-line Social Bar ── */}
+        <motion.nav
+          variants={fadeUp}
+          className="flex items-center gap-1 font-mono text-[12px] text-zinc-400"
+        >
+          {/* {socials.map((s, i) => (
+            <span key={s.label} className="flex items-center gap-1">
+              <a
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-600 transition-colors duration-150"
+              >
+                {s.label}
+              </a>
+              {i < socials.length - 1 && (
+                <span className="text-zinc-300 select-none">·</span>
+              )}
+            </span>
+          ))} */}
+        </motion.nav>
 
-        {/* Profile */}
-        <motion.div variants={fadeUp} className="mt-12">
+        {/* ── Profile ── */}
+        <motion.div variants={fadeUp} className="mt-14">
           <Image
             src="/me.jpg"
             alt="Vivek Upasani"
-            width={64}
-            height={64}
-            className="rounded-full border border-zinc-200"
+            width={80}
+            height={80}
+            className="rounded-xl ring-1 ring-zinc-200 shadow-sm"
           />
 
-          <h1 className="text-2xl font-semibold mt-4">vivek upasani
-            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 48 48" className="inline-block ml-1 mb-1">
-              <polygon fill="#42a5f5" points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"></polygon><polygon fill="#fff" points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"></polygon>
+          <h1 className="text-2xl font-semibold mt-4 flex items-center gap-1.5">
+            vivek upasani
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 48 48"
+              className="inline-block"
+            >
+              <polygon
+                fill="#42a5f5"
+                points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"
+              />
+              <polygon
+                fill="#fff"
+                points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"
+              />
             </svg>
           </h1>
-          <p className="text-zinc-600 mt-1">21 y/o engineer, freelancer</p>
+          <p className="text-zinc-500 mt-1 text-[15px]">
+            21 y/o engineer, freelancer
+          </p>
         </motion.div>
 
-        {/* Currently */}
-        <motion.div variants={fadeUp} className="mt-12">
+        {/* ── Currently ── */}
+        <motion.div variants={fadeUp} className="mt-16">
           <Title title="currently" />
-          <p className="mt-3 text-zinc-600 leading-relaxed">
-            I’m currently working as a freelance full-stack developer, and
+          <p className="mt-4 text-zinc-600 leading-relaxed text-[15px]">
+            I&apos;m currently working as a freelance full-stack developer, and
             building{" "}
             <Link
-              href="https://beta.cluezy.site"
+              href="https://app.cluezy.site"
               className="text-blue-600 hover:underline font-medium"
               target="_blank"
             >
@@ -107,10 +127,10 @@ export default function Home() {
           </p>
         </motion.div>
 
-        {/* Work */}
-        <motion.div variants={fadeUp} className="mt-12">
+        {/* ── Work ── */}
+        <motion.div variants={fadeUp} className="mt-16">
           <Title title="where i've worked" />
-          <div className="flex flex-col gap-3 mt-4">
+          <div className="flex flex-col gap-1 mt-5">
             {WorkList.map((work, idx) => (
               <WorkedAt
                 key={idx}
@@ -123,10 +143,10 @@ export default function Home() {
           </div>
         </motion.div>
 
-        {/* Projects */}
-        <motion.div variants={fadeUp} className="mt-12">
+        {/* ── Projects ── */}
+        <motion.div variants={fadeUp} className="mt-16">
           <Title title="client projects" />
-          <div className="flex flex-col gap-3 mt-4">
+          <div className="flex flex-col gap-1 mt-5">
             {ProjectList.map((project, idx) => (
               <ProjectTile
                 key={idx}
@@ -139,37 +159,39 @@ export default function Home() {
           </div>
         </motion.div>
 
-        {/* Skills */}
-        <motion.div variants={fadeUp} className="mt-12">
+        {/* ── Skills ── */}
+        <motion.div variants={fadeUp} className="mt-16">
           <Title title="skills" />
-          <div className="flex flex-wrap gap-3 mt-4">
-            {Skills.map((skill, idx) => (
-              <span key={idx} className="text-sm text-zinc-700">
-                {skill}
-                {idx !== Skills.length - 1 && " •"}
-              </span>
-            ))}
-          </div>
+          <p className="mt-4 font-mono text-[13px] text-zinc-500 leading-relaxed">
+            {Skills.join(" / ")}
+          </p>
         </motion.div>
 
-        {/* Footer */}
+        {/* ── Footer ── */}
         <motion.div
           variants={fadeUp}
-          className="mt-16 text-zinc-500 text-sm"
+          className="mt-20 pb-8 font-mono text-[12px] text-zinc-400"
         >
-          if you want to see more of my work, check my{" "}
+          see more →{" "}
           <Link
             href="https://x.com/v1vekupasani"
-            className="text-blue-600 underline"
+            className="text-blue-600 hover:underline"
           >
             twitter
-          </Link>{" "}
-          or{" "}
+          </Link>
+          {" · "}
           <Link
             href="https://github.com/vivekupasani"
-            className="text-blue-600 underline"
+            className="text-blue-600 hover:underline"
           >
             github
+          </Link>
+          {" · "}
+          <Link
+            href="https://linkedin.com/in/vivekupasani"
+            className="text-blue-600 hover:underline"
+          >
+            linkedin
           </Link>
         </motion.div>
       </motion.div>

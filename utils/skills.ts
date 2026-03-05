@@ -16,6 +16,8 @@ export const Skills = [
     "shadcn",
     "git",
     "github",
+    "vercel",
+    "render",
     "vscode",
     "antigravity",
     "cursor"
