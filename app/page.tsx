@@ -7,9 +7,9 @@ import Link from "next/link";
 import { ProjectTile } from "@/components/Project";
 import { Title } from "@/components/Title";
 import { WorkedAt } from "@/components/WorkedAt";
-import { ProjectList } from "@/utils/projects";
-import { Skills } from "@/utils/skills";
-import { WorkList } from "@/utils/work";
+import { ClientProjectList, PersonalProjectList } from "@/lib/utils/projects";
+import { Skills } from "@/lib/utils/skills";
+import { WorkList } from "@/lib/utils/work";
 
 /* ------------------ Animations ------------------ */
 
@@ -147,7 +147,23 @@ export default function Home() {
         <motion.div variants={fadeUp} className="mt-16">
           <Title title="client projects" />
           <div className="flex flex-col gap-1 mt-5">
-            {ProjectList.map((project, idx) => (
+            {ClientProjectList.map((project, idx) => (
+              <ProjectTile
+                key={idx}
+                projectName={project.projectName}
+                imageSrc={project.imageSrc}
+                desc={project.desc}
+                link={project.link}
+              />
+            ))}
+          </div>
+        </motion.div>
+
+        {/* ── Projects ── */}
+        <motion.div variants={fadeUp} className="mt-16">
+          <Title title="personal projects" />
+          <div className="flex flex-col gap-1 mt-5">
+            {PersonalProjectList.map((project, idx) => (
               <ProjectTile
                 key={idx}
                 projectName={project.projectName}

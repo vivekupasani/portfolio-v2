@@ -1,4 +1,4 @@
-export const Skills = [
+export const Skills: string[] = [
     "typescript",
     "javascript",
     "next.js",
@@ -7,6 +7,8 @@ export const Skills = [
     "react native",
     "node.js",
     "express.js",
+    "redis",
+    "upstash",
     "firebase",
     "supabase",
     "mongo db",

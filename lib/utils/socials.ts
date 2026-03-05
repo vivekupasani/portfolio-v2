@@ -1,4 +1,6 @@
-export const socials = [
+import { Social } from "@/lib/types";
+
+export const socials: Social[] = [
     {
         name: "twitter",
         link: "https://x.com/v1vekupasani"

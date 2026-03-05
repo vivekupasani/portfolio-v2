@@ -1,6 +1,6 @@
-import { link } from "fs";
+import { Work } from "@/lib/types";
 
-export const WorkList = [
+export const WorkList: Work[] = [
     {
         companyName: "boulevard legacy llc",
         imageSrc: "https://www.boulevardlegacy.com/lovable-uploads/fb17db3b-0058-4ca2-9f6a-59f6598894dd.png",
@@ -10,8 +10,7 @@ export const WorkList = [
     {
         companyName: "keryar",
         imageSrc: "/keryar-logo.png",
-        role: "full stack developer intern"
-        ,
+        role: "full stack developer intern",
         link: "https://keryar.com"
     },
 ]
