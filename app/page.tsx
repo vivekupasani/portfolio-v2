@@ -79,11 +79,11 @@ export default function Home() {
         {/* ── Profile ── */}
         <motion.div variants={fadeUp} className="mt-14">
           <Image
-            src="/vivek.png"
+            src="/vivek.jpg"
             alt="Vivek Upasani"
             width={80}
             height={80}
-            className="rounded-xl ring-1 ring-zinc-200 shadow-sm"
+            className="rounded-xl h-20 w-20 ring-1 ring-zinc-200 shadow-sm object-cover"
           />
 
           <h1 className="text-2xl font-semibold mt-4 flex items-center gap-1.5">
@@ -179,7 +179,7 @@ export default function Home() {
         <motion.div variants={fadeUp} className="mt-16">
           <Title title="skills" />
           <p className="mt-4 font-mono text-[13px] text-zinc-500 leading-relaxed">
-            {Skills.join(" / ")}
+            {Skills.join(" • ")}
           </p>
         </motion.div>
 
