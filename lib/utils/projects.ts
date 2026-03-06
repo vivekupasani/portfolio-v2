@@ -15,7 +15,7 @@ export const ClientProjectList: Project[] = [
     },
     {
         projectName: "drft marketing",
-        imageSrc: "/drft-logo.png",
+        imageSrc: "/ddrft-logo.png",
         desc: "influencer marketing that delivers.",
         link: "https://www.drftmarketing.com/",
     },
