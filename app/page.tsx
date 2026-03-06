@@ -79,7 +79,7 @@ export default function Home() {
         {/* ── Profile ── */}
         <motion.div variants={fadeUp} className="mt-14">
           <Image
-            src="/me.jpg"
+            src="/vivek.png"
             alt="Vivek Upasani"
             width={80}
             height={80}
