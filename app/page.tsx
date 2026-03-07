@@ -209,6 +209,14 @@ export default function Home() {
           >
             linkedin
           </Link>
+          {" · "}
+          <Link
+            href="/Vivek_Upasani_Resume.pdf"
+            target="_blank"
+            className="text-blue-600 hover:underline"
+          >
+            resume
+          </Link>
         </motion.div>
       </motion.div>
     </section>
