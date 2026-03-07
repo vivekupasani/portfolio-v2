@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ExternalLink, Link2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
@@ -22,7 +22,7 @@ export const ProjectTile = ({
         <MotionLink
             href={link}
             target="_blank"
-            className="flex items-center gap-4 py-3 px-4 -mx-4 rounded-lg border-l-2 border-transparent hover:border-blue-500 hover:bg-zinc-100/40 transition-all duration-200 group"
+            className="flex items-center gap-4 py-3 px-4 -mx-4 rounded-lg hover:bg-zinc-100 transition-all duration-200 group"
             whileHover={{ x: 2 }}
             transition={{ type: "spring" as const, stiffness: 400, damping: 25 }}
         >
@@ -37,13 +37,13 @@ export const ProjectTile = ({
             </div>
 
             <div className="flex flex-col grow min-w-0">
-                <span className="font-medium text-zinc-900 text-[15px]">
+                <span className="flex items-center justify-start  gap-2 font-medium text-zinc-900 text-[15px]">
                     {projectName}
+                    <ExternalLink className="size-3 text-zinc-300 group-hover:text-black/60 opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all duration-200 shrink-0" />
                 </span>
                 <p className="text-[13px] text-zinc-400 leading-normal">{desc}</p>
             </div>
 
-            <ArrowUpRight className="size-4 text-zinc-300 group-hover:text-blue-500 opacity-0 group-hover:opacity-100 translate-x-[-4px] group-hover:translate-x-0 transition-all duration-200 shrink-0" />
         </MotionLink>
     );
 };
