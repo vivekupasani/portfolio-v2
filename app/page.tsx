@@ -114,7 +114,7 @@ export default function Home() {
         <motion.div variants={fadeUp} className="mt-16">
           <Title title="currently" />
           <p className="mt-4 text-zinc-600 leading-relaxed text-[15px]">
-            I&apos;m currently working as a freelance full-stack developer, and
+            I&apos;m currently working as a freelance full-stack and mobile engineer, and
             building{" "}
             <Link
               href="https://app.cluezy.site"
