@@ -58,23 +58,7 @@ export default function Home() {
         <motion.nav
           variants={fadeUp}
           className="flex items-center gap-1 font-mono text-[12px] text-zinc-400"
-        >
-          {/* {socials.map((s, i) => (
-            <span key={s.label} className="flex items-center gap-1">
-              <a
-                href={s.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-blue-600 transition-colors duration-150"
-              >
-                {s.label}
-              </a>
-              {i < socials.length - 1 && (
-                <span className="text-zinc-300 select-none">·</span>
-              )}
-            </span>
-          ))} */}
-        </motion.nav>
+        />
 
         {/* ── Profile ── */}
         <motion.div variants={fadeUp} className="mt-14">
@@ -134,10 +118,7 @@ export default function Home() {
             {WorkList.map((work, idx) => (
               <WorkedAt
                 key={idx}
-                companyName={work.companyName}
-                imageSrc={work.imageSrc}
-                role={work.role}
-                link={work.link}
+                work={work}
               />
             ))}
           </div>
@@ -150,10 +131,7 @@ export default function Home() {
             {ClientProjectList.map((project, idx) => (
               <ProjectTile
                 key={idx}
-                projectName={project.projectName}
-                imageSrc={project.imageSrc}
-                desc={project.desc}
-                link={project.link}
+                project={project}
               />
             ))}
           </div>
@@ -166,10 +144,7 @@ export default function Home() {
             {PersonalProjectList.map((project, idx) => (
               <ProjectTile
                 key={idx}
-                projectName={project.projectName}
-                imageSrc={project.imageSrc}
-                desc={project.desc}
-                link={project.link}
+                project={project}
               />
             ))}
           </div>

@@ -2,46 +2,53 @@ import { ArrowUpRight, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
+import { Work } from "@/lib/types";
 
 const MotionLink = motion(Link);
 
 interface WorkedAtProps {
-    imageSrc: string;
-    companyName: string;
-    role: string;
-    link: string;
+    work: Work
 }
 
 export const WorkedAt = ({
-    imageSrc,
-    companyName,
-    role,
-    link,
+    work
 }: WorkedAtProps) => {
     return (
         <MotionLink
-            href={link}
+            href={work.link}
             target="_blank"
-            className="flex items-center gap-4 py-3 px-4 -mx-4 rounded-lg hover:bg-zinc-100 transition-all duration-200 group"
-            whileHover={{ x: 2 }}
+            className="flex items-start md:items-center gap-4 py-3 px-4 -mx-4 rounded-lg hover:bg-zinc-100 transition-all duration-200 group"
             transition={{ type: "spring" as const, stiffness: 400, damping: 25 }}
         >
-            <div className="relative shrink-0">
+            <div className="relative shrink-0 mt-1 md:mt-0">
                 <Image
-                    src={imageSrc}
-                    alt={companyName}
+                    src={work.imageSrc}
+                    alt={work.companyName}
                     height={36}
                     width={36}
                     className="size-9 rounded-lg border border-zinc-200"
                 />
             </div>
 
-            <div className="flex flex-col grow min-w-0">
-                <span className="flex gap-2 items-center justify-start font-medium text-zinc-900 text-[15px]">
-                    {companyName}
-                    <ExternalLink className="size-3 text-zinc-300 group-hover:text-black/60 opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all duration-200 shrink-0" />
-                </span>
-                <p className="text-sm text-zinc-500">{role}</p>
+            <div className="flex items-center justify-between w-full">
+                <div className="flex flex-col">
+                    <span className="flex gap-2 items-center justify-start font-medium text-zinc-900 text-[15px]">
+                        {work.companyName}
+                    </span>
+                    <p className="text-sm text-zinc-500">{work.role}</p>
+                    <span className="flex md:hidden text-zinc-400 font-normal text-sm">{work.timelineMobile}</span>
+                </div>
+
+                {/* RIGHT SIDE */}
+                <div className="hidden md:flex flex-col items-end text-right">
+                    <span className="text-[13px] font-medium text-zinc-600">
+                        {work.timeline}
+                    </span>
+                    <span className="text-[13px] text-zinc-400">
+                        {work.location}
+                    </span>
+                </div>
+
             </div>
 
         </MotionLink>
