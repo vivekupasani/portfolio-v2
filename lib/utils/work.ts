@@ -26,9 +26,9 @@ export const WorkList: Work[] = [
         imageSrc: "/keryar-logo.png",
         role: "full stack developer intern",
         link: "https://keryar.com",
-        location: "Gujarat, India (Remote)",
+        location: "Gujarat, India (On-site)",
         timeline: "Feb 2025 - Jun 2025",
-        locationMobile: "ind - Remote",
+        locationMobile: "ind - On-site",
         timelineMobile: "February 2025 - June 2025"
     },
 ]

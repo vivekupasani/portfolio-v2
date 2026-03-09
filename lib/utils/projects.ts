@@ -2,16 +2,6 @@ import { Project } from "@/lib/types";
 
 export const ClientProjectList: Project[] = [
     {
-        projectName: "cluezy",
-        imageSrc: "/cluezy-logo.png",
-        desc: "agentic ai research engine.",
-        link: "https://cluezy.site",
-        timeline: "Dec 2025 - Present",
-        category: "Web Development",
-        timelineMobile: "December 2025 - Present",
-        categoryMobile: "Website dev"
-    },
-    {
         projectName: "hooked",
         imageSrc: "/hookd-logo.png",
         desc: "analyze your video to increase retention.",
