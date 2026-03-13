@@ -7,6 +7,9 @@ export interface Project {
     category: string
     timelineMobile: string,
     categoryMobile: string
+    slug: string;
+    techStack: string[];
+    details: string[];
 }
 
 export interface Work {
@@ -18,6 +21,9 @@ export interface Work {
     location: string
     timelineMobile: string,
     locationMobile: string
+    slug: string;
+    techStack: string[];
+    details: string[];
 }
 
 export interface Social {

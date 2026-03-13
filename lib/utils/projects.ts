@@ -9,7 +9,15 @@ export const ClientProjectList: Project[] = [
         timeline: "Jul 2025 - Aug 2025",
         category: "Web Development",
         timelineMobile: "July 2025 - August 2025",
-        categoryMobile: "Website dev"
+        categoryMobile: "Website dev",
+        slug: "hooked",
+        techStack: ["React", "Next.js", "Typescript", "Tailwind CSS", "Framer Motion", "Stripe", "Firebase"],
+        details: [
+            "Developed a video analysis platform to help creators increase retention.",
+            "Implemented real-time analytics and visualization tools.",
+            "Designed a minimal and highly responsive user interface.",
+            "Optimized video processing workflows for faster results."
+        ]
     },
     {
         projectName: "drft marketing",
@@ -19,7 +27,13 @@ export const ClientProjectList: Project[] = [
         timeline: "Aug 2025 • 1 month",
         category: "Web Development",
         timelineMobile: "August 2025 • 1 month",
-        categoryMobile: "Website dev"
+        categoryMobile: "Website dev",
+        slug: "drft-marketing",
+        techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
+        details: [
+            "Built a marketing agency landing page",
+            "Ensured high performance and SEO optimization."
+        ]
     },
     {
         projectName: "microcam",
@@ -29,7 +43,15 @@ export const ClientProjectList: Project[] = [
         timeline: "Aug 2025 • 1 month",
         category: "Web Development",
         timelineMobile: "August 2025 • 1 month",
-        categoryMobile: "Website dev"
+        categoryMobile: "Website dev",
+        slug: "microcam",
+        techStack: ["React", "Node.js", "Express", "MongoDB"],
+        details: [
+            "Designed and developed a website for advanced security solutions.",
+            "Implemented a custom CMS for managing product listings.",
+            "Integrated inquiry forms and lead management systems.",
+            "Focused on building a secure and scalable architecture."
+        ]
     },
     {
         projectName: "instakit",
@@ -39,7 +61,14 @@ export const ClientProjectList: Project[] = [
         timeline: "Aug 2025 - Sep 2025",
         category: "Web Development",
         timelineMobile: "August 2025 - September 2025",
-        categoryMobile: "Website dev"
+        categoryMobile: "Website dev",
+        slug: "instakit",
+        techStack: ["Next.js", "React", "Tailwind CSS", "PDFGen", "Stripe", "Firebase"],
+        details: [
+            "Created an automated media kit generator for influencers.",
+            "Implemented server-side PDF generation for kits.",
+            "Streamlined the user onboarding and payment process."
+        ]
     }
 ]
 
@@ -52,7 +81,17 @@ export const PersonalProjectList: Project[] = [
         timeline: "Mar 2025 • 1 month",
         category: "Web Development",
         timelineMobile: "March 2025 • 1 month",
-        categoryMobile: "Website Dev"
+        categoryMobile: "Website Dev",
+        slug: "jsonbazaar",
+        techStack: ["Node.js", "Express", "EJS"],
+        details: [
+            "Built a mock REST API platform similar to JSONPlaceholder for developers to test and prototype applications.",
+            "Implemented endpoints for resources like posts, users, comments, and todos.",
+            "Enabled full CRUD operations for testing API requests and responses.",
+            "Designed the platform to provide realistic JSON data for frontend development.",
+            "Created a simple and developer-friendly interface for quick API testing.",
+            "Ensured fast and scalable API responses suitable for development environments."
+        ]
     },
     {
         projectName: "mock3wallet",
@@ -62,7 +101,20 @@ export const PersonalProjectList: Project[] = [
         timeline: "May 2025 - Jun 2025",
         category: "App Development",
         timelineMobile: "May 2025 - June 2025",
-        categoryMobile: "App Dev"
+        categoryMobile: "App Dev",
+        slug: "mock3wallet",
+        techStack: ["React Native", "TypeScript", "Node.js", "Express.js", "MongoDB"],
+        details: [
+            "Developing a full-stack crypto wallet simulation app that mimics Web3 wallet functionality without blockchain integration.",
+            "Implementing wallet creation, wallet import, token management, transactions, contact book, and user settings features.",
+            "Built a responsive and intuitive mobile frontend using React Native.",
+            "Added authentication flows including login and wallet management UI.",
+            "Designed a secure backend using Express.js with token-based authentication.",
+            "Implemented CRUD operations for wallets, contacts, and transaction records.",
+            "Built transaction state tracking to simulate real wallet behavior.",
+            "Structured the backend using a clean MVC architecture for scalability and maintainability.",
+            "Simulated real-world Web3 wallet workflows to create a learning environment before blockchain integration."
+        ]
     },
     {
         projectName: "pixsy",
@@ -72,6 +124,14 @@ export const PersonalProjectList: Project[] = [
         timeline: "Aug 2024 - Oct 2024",
         category: "App Development",
         timelineMobile: "August 2024 - October 2024",
-        categoryMobile: "App Dev"
+        categoryMobile: "App Dev",
+        slug: "pixsy",
+        techStack: ["Flutter", "Firebase", "Dart"],
+        details: [
+            "Built a complete social media platform with real-time features.",
+            "Implemented image sharing, likes, and comments.",
+            "Developed a real-time chat system using Firebase Firestore.",
+            "Focused on creating a smooth and engaging user experience."
+        ]
     }
 ]

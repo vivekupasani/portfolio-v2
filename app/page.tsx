@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import { ProjectTile } from "@/components/Project";
 import { Title } from "@/components/Title";
-import { WorkedAt } from "@/components/WorkedAt";
+import { WorkedAt } from "@/components/Work";
 import { ClientProjectList, PersonalProjectList } from "@/lib/utils/projects";
 import { Skills } from "@/lib/utils/skills";
 import { WorkList } from "@/lib/utils/work";

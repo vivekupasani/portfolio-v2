@@ -15,8 +15,7 @@ export const WorkedAt = ({
 }: WorkedAtProps) => {
     return (
         <MotionLink
-            href={work.link}
-            target="_blank"
+            href={`/work/${work.slug}`}
             className="flex items-start md:items-center gap-4 py-3 px-4 -mx-4 rounded-lg hover:bg-zinc-100 transition-all duration-200 group"
             transition={{ type: "spring" as const, stiffness: 400, damping: 25 }}
         >

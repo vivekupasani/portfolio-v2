@@ -15,8 +15,7 @@ export const ProjectTile = ({
 }: ProjectTileProps) => {
     return (
         <MotionLink
-            href={project.link}
-            target="_blank"
+            href={`/projects/${project.slug}`}
             className="flex items-start md:items-center gap-4 py-3 px-4 -mx-4 rounded-lg hover:bg-zinc-100 transition-all duration-200 group"
             transition={{ type: "spring" as const, stiffness: 400, damping: 25 }}
         >
