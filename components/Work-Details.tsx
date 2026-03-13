@@ -116,7 +116,9 @@ export function WorkDetails() {
                     <ul className="mt-4 space-y-3">
                         {work.details.map((detail, idx) => (
                             <li key={idx} className="flex items-start gap-4 text-zinc-600 text-[15px] leading-relaxed">
-                                <span className="mt-2 text-blue-500 font-mono text-xs">0{idx + 1}</span>
+                                <div className="mt-1.5 text-blue-500 font-mono text-[11px] tabular-nums shrink-0">
+                                    {(idx + 1).toString().padStart(2, "0")}
+                                </div>
                                 {detail}
                             </li>
                         ))}
