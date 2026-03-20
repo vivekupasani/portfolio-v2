@@ -8,8 +8,9 @@ export function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const work = WorkList.find((w) => w.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const work = WorkList.find((w) => w.slug === slug);
   if (!work) return { title: "Work Not Found" };
 
   return {
@@ -23,6 +24,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function WorkDetail({ params }: { params: { slug: string } }) {
+export default async function WorkDetail({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   return <WorkDetails />
 }
