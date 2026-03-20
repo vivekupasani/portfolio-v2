@@ -7,11 +7,13 @@ import { Project } from "@/lib/types";
 const MotionLink = motion(Link);
 
 interface ProjectTileProps {
-    project: Project
+    project: Project;
+    showTechStack?: boolean;
 }
 
 export const ProjectTile = ({
-    project
+    project,
+    showTechStack = false
 }: ProjectTileProps) => {
     return (
         <MotionLink
@@ -19,7 +21,7 @@ export const ProjectTile = ({
             className="flex items-start md:items-center gap-4 py-3 px-4 -mx-4 rounded-lg hover:bg-zinc-100 transition-all duration-200 group"
             transition={{ type: "spring" as const, stiffness: 400, damping: 25 }}
         >
-            <div className="relative shrink-0 mt-1 md:mt-0">
+            {/* <div className="relative shrink-0 mt-1 md:mt-0">
                 <Image
                     src={project.imageSrc}
                     alt={project.projectName}
@@ -27,7 +29,7 @@ export const ProjectTile = ({
                     width={36}
                     className="size-9 rounded-lg border border-zinc-200"
                 />
-            </div>
+            </div> */}
 
             <div className="flex items-center justify-between w-full">
 
@@ -40,6 +42,11 @@ export const ProjectTile = ({
                     <p className="text-[13px] text-zinc-400 leading-normal">
                         {project.desc}
                     </p>
+                    {showTechStack && (
+                        <div className="flex flex-wrap gap-1 mt-1 text-[11px] text-zinc-400/80">
+                            {project.techStack.join(" • ")}
+                        </div>
+                    )}
                     <span className="flex md:hidden text-neutral-300 font-normal text-sm">{project.timelineMobile}</span>
                 </div>
 

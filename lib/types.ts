@@ -1,3 +1,15 @@
+export enum ProjectType {
+    website = "website",
+    mobile = "mobile",
+    ai = "ai",
+    other = "other"
+}
+
+export enum ProjectKind {
+    client = "client",
+    personal = "personal"
+}
+
 export interface Project {
     projectName: string;
     imageSrc: string;
@@ -10,6 +22,8 @@ export interface Project {
     slug: string;
     techStack: string[];
     details: string[];
+    type: ProjectType;
+    kind: ProjectKind;
 }
 
 export interface Work {

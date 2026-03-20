@@ -4,10 +4,11 @@ import { motion, Variants } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams, notFound } from "next/navigation";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft, ExternalLink, Globe, Smartphone, Briefcase, User } from "lucide-react";
 
 import { ClientProjectList, PersonalProjectList } from "@/lib/utils/projects";
 import { Title } from "@/components/Title";
+import { Footer } from "@/components/Footer";
 
 const container: Variants = {
     hidden: { opacity: 0 },
@@ -51,11 +52,10 @@ export function ProjectDetails() {
                 {/* Back Link */}
                 <div>
                     <Link
-                        href="/"
-                        className="inline-flex items-center gap-2 text-zinc-400 hover:text-zinc-900 transition-colors text-sm mb-8 group"
+                        href="/projects"
+                        className="inline-flex items-center gap-2 text-zinc-400 hover:text-zinc-900 transition-colors text-[13px] mb-8 group font-mono"
                     >
-                        <ArrowLeft size={16} />
-                        back to home
+                        ← go back
                     </Link>
                 </div>
 
@@ -81,19 +81,19 @@ export function ProjectDetails() {
                 </motion.div>
 
                 {/* Meta info */}
-                <motion.div variants={fadeUp} className="flex gap-8 mt-8 border-y border-zinc-100 py-6">
+                <motion.div variants={fadeUp} className="flex gap-8 mt-2 border-t border-zinc-100 py-6">
                     <div className="flex flex-col gap-1">
                         <span className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider">Timeline</span>
                         <span className="text-sm font-medium text-zinc-700">{project.timeline}</span>
                     </div>
                     <div className="flex flex-col gap-1">
-                        <span className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider">Category</span>
-                        <span className="text-sm font-medium text-zinc-700">{project.category}</span>
+                        <span className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider">Type</span>
+                        <span className="text-sm font-medium text-zinc-700 capitalize">{project.category}</span>
                     </div>
                 </motion.div>
 
                 {/* Tech Stack */}
-                <motion.div variants={fadeUp} className="mt-12">
+                <motion.div variants={fadeUp} className="mt-2">
                     <Title title="tech stack" />
                     <div className="flex flex-wrap gap-2 mt-4">
                         {project.techStack.map((tech) => (
@@ -119,26 +119,7 @@ export function ProjectDetails() {
                         ))}
                     </ul>
                 </motion.div>
-
-                {/* Visit Link */}
-                <motion.div variants={fadeUp} className="mt-16">
-                    <Link
-                        href={project.link}
-                        target="_blank"
-                        className="inline-flex items-center gap-2 px-4 py-2 bg-zinc-900 text-zinc-50 rounded-lg text-sm font-medium hover:bg-zinc-800 transition-colors"
-                    >
-                        Visit Project
-                        <ExternalLink size={14} />
-                    </Link>
-                </motion.div>
-
-                {/* Footer info (same as main page but minimal) */}
-                <motion.div
-                    variants={fadeUp}
-                    className="mt-20 pb-8 font-mono text-[12px] text-zinc-400"
-                >
-                    © 2026 • vivek upasani
-                </motion.div>
+                <Footer />
             </motion.div>
         </section>
     );

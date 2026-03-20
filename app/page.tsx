@@ -10,6 +10,7 @@ import { WorkedAt } from "@/components/Work";
 import { ClientProjectList, PersonalProjectList } from "@/lib/utils/projects";
 import { Skills } from "@/lib/utils/skills";
 import { WorkList } from "@/lib/utils/work";
+import { Footer } from "@/components/Footer";
 
 /* ------------------ Animations ------------------ */
 
@@ -54,12 +55,6 @@ export default function Home() {
         animate="show"
         className="flex flex-col font-sans py-10 px-6 md:px-0 max-w-xl mx-auto"
       >
-        {/* ── Status-line Social Bar ── */}
-        <motion.nav
-          variants={fadeUp}
-          className="flex items-center gap-1 font-mono text-[12px] text-zinc-400"
-        />
-
         {/* ── Profile ── */}
         <motion.div variants={fadeUp} className="mt-14">
           <Image
@@ -90,12 +85,12 @@ export default function Home() {
             </svg>
           </h1>
           <p className="text-zinc-500 mt-1 text-[15px]">
-            21 y/o engineer, freelancer
+            21 y/o engineer, indie hacker
           </p>
         </motion.div>
 
         {/* ── Currently ── */}
-        <motion.div variants={fadeUp} className="mt-16">
+        <motion.div variants={fadeUp} className="mt-8">
           <Title title="currently" />
           <p className="mt-4 text-zinc-600 leading-relaxed text-[15px]">
             I&apos;m currently working as a freelance full-stack and mobile engineer, and
@@ -112,10 +107,10 @@ export default function Home() {
         </motion.div>
 
         {/* ── Work ── */}
-        <motion.div variants={fadeUp} className="mt-16">
-          <Title title="where i've worked" />
+        <motion.div variants={fadeUp} className="mt-8">
+          <Title title="where i've worked" href="/work" />
           <div className="flex flex-col gap-1 mt-5">
-            {WorkList.map((work, idx) => (
+            {WorkList.slice(0, 3).map((work, idx) => (
               <WorkedAt
                 key={idx}
                 work={work}
@@ -125,10 +120,10 @@ export default function Home() {
         </motion.div>
 
         {/* ── Projects ── */}
-        <motion.div variants={fadeUp} className="mt-16">
-          <Title title="client projects" />
+        <motion.div variants={fadeUp} className="mt-8">
+          <Title title="selected projects" href="/projects" />
           <div className="flex flex-col gap-1 mt-5">
-            {ClientProjectList.map((project, idx) => (
+            {ClientProjectList.slice(0, 3).map((project, idx) => (
               <ProjectTile
                 key={idx}
                 project={project}
@@ -137,62 +132,16 @@ export default function Home() {
           </div>
         </motion.div>
 
-        {/* ── Projects ── */}
-        <motion.div variants={fadeUp} className="mt-16">
-          <Title title="personal projects" />
-          <div className="flex flex-col gap-1 mt-5">
-            {PersonalProjectList.map((project, idx) => (
-              <ProjectTile
-                key={idx}
-                project={project}
-              />
-            ))}
-          </div>
-        </motion.div>
 
         {/* ── Skills ── */}
-        <motion.div variants={fadeUp} className="mt-16">
+        <motion.div variants={fadeUp} className="mt-8">
           <Title title="skills" />
           <p className="mt-4 font-mono text-[13px] text-zinc-500 leading-relaxed">
             {Skills.join(" • ")}
           </p>
         </motion.div>
 
-        {/* ── Footer ── */}
-        <motion.div
-          variants={fadeUp}
-          className="mt-20 pb-8 font-mono text-[12px] text-zinc-400"
-        >
-          see more →{" "}
-          <Link
-            href="https://x.com/v1vekupasani"
-            className="text-blue-600 hover:underline"
-          >
-            twitter
-          </Link>
-          {" · "}
-          <Link
-            href="https://github.com/vivekupasani"
-            className="text-blue-600 hover:underline"
-          >
-            github
-          </Link>
-          {" · "}
-          <Link
-            href="https://linkedin.com/in/vivekupasani"
-            className="text-blue-600 hover:underline"
-          >
-            linkedin
-          </Link>
-          {" · "}
-          <Link
-            href="/Vivek_Upasani_Resume.pdf"
-            target="_blank"
-            className="text-blue-600 hover:underline"
-          >
-            resume
-          </Link>
-        </motion.div>
+        <Footer />
       </motion.div>
     </section>
   );

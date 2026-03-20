@@ -7,11 +7,13 @@ import { Work } from "@/lib/types";
 const MotionLink = motion(Link);
 
 interface WorkedAtProps {
-    work: Work
+    work: Work;
+    showTechStack?: boolean;
 }
 
 export const WorkedAt = ({
-    work
+    work,
+    showTechStack = false
 }: WorkedAtProps) => {
     return (
         <MotionLink
@@ -19,7 +21,7 @@ export const WorkedAt = ({
             className="flex items-start md:items-center gap-4 py-3 px-4 -mx-4 rounded-lg hover:bg-zinc-100 transition-all duration-200 group"
             transition={{ type: "spring" as const, stiffness: 400, damping: 25 }}
         >
-            <div className="relative shrink-0 mt-1 md:mt-0">
+            {/* <div className="relative shrink-0 mt-1 md:mt-0">
                 <Image
                     src={work.imageSrc}
                     alt={work.companyName}
@@ -27,7 +29,7 @@ export const WorkedAt = ({
                     width={36}
                     className="size-9 rounded-lg border border-zinc-200"
                 />
-            </div>
+            </div> */}
 
             <div className="flex items-center justify-between w-full">
                 <div className="flex flex-col">
@@ -35,6 +37,12 @@ export const WorkedAt = ({
                         {work.companyName}
                     </span>
                     <p className="text-sm text-zinc-500">{work.role}</p>
+                    {showTechStack && (
+                        <div className="flex flex-wrap gap-1 mt-1 text-[11px] text-zinc-400/80">
+                            {work.techStack.slice(0, 5).join(" • ")}
+                            {work.techStack.length > 5 && "..."}
+                        </div>
+                    )}
                     <span className="flex md:hidden text-zinc-400 font-normal text-sm">{work.timelineMobile}</span>
                 </div>
 

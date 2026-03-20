@@ -8,6 +8,7 @@ import { ArrowLeft, ExternalLink, MapPin } from "lucide-react";
 
 import { WorkList } from "@/lib/utils/work";
 import { Title } from "@/components/Title";
+import { Footer } from "@/components/Footer";
 
 const container: Variants = {
     hidden: { opacity: 0 },
@@ -50,11 +51,10 @@ export function WorkDetails() {
                 {/* Back Link */}
                 <div>
                     <Link
-                        href="/"
-                        className="inline-flex items-center gap-2 text-zinc-400 hover:text-zinc-900 transition-colors text-sm mb-8 group"
+                        href="/work"
+                        className="inline-flex items-center gap-2 font-mono text-zinc-400 hover:text-zinc-900 transition-colors text-[13px] mb-8 group"
                     >
-                        <ArrowLeft size={16} />
-                        back to home
+                        ← go back
                     </Link>
                 </div>
 
@@ -83,20 +83,8 @@ export function WorkDetails() {
                     </div>
                 </motion.div>
 
-                {/* Meta info */}
-                <motion.div variants={fadeUp} className="flex gap-8 mt-8 border-y border-zinc-100 py-6">
-                    <div className="flex flex-col gap-1">
-                        <span className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider">Timeline</span>
-                        <span className="text-sm font-medium text-zinc-700">{work.timeline}</span>
-                    </div>
-                    <div className="flex flex-col gap-1">
-                        <span className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider">Type</span>
-                        <span className="text-sm font-medium text-zinc-700">Experience</span>
-                    </div>
-                </motion.div>
-
                 {/* Tech Stack */}
-                <motion.div variants={fadeUp} className="mt-12">
+                <motion.div variants={fadeUp} className="mt-8">
                     <Title title="technologies" />
                     <div className="flex flex-wrap gap-2 mt-4">
                         {work.techStack.map((tech) => (
@@ -126,7 +114,7 @@ export function WorkDetails() {
                 </motion.div>
 
                 {/* Website Link */}
-                <motion.div variants={fadeUp} className="mt-16">
+                {/* <motion.div variants={fadeUp} className="mt-16">
                     <Link
                         href={work.link}
                         target="_blank"
@@ -135,15 +123,9 @@ export function WorkDetails() {
                         Visit Website
                         <ExternalLink size={14} />
                     </Link>
-                </motion.div>
+                </motion.div> */}
 
-                {/* Footer info */}
-                <motion.div
-                    variants={fadeUp}
-                    className="mt-20 pb-8 font-mono text-[12px] text-zinc-400"
-                >
-                    © 2026 • vivek upasani
-                </motion.div>
+                <Footer />
             </motion.div>
         </section>
     );

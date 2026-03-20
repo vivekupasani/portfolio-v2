@@ -1,4 +1,4 @@
-import { Project } from "@/lib/types";
+import { Project, ProjectKind, ProjectType } from "@/lib/types";
 
 export const ClientProjectList: Project[] = [
     {
@@ -17,7 +17,9 @@ export const ClientProjectList: Project[] = [
             "Implemented real-time analytics and visualization tools.",
             "Designed a minimal and highly responsive user interface.",
             "Optimized video processing workflows for faster results."
-        ]
+        ],
+        type: ProjectType.website,
+        kind: ProjectKind.client
     },
     {
         projectName: "drft marketing",
@@ -33,7 +35,9 @@ export const ClientProjectList: Project[] = [
         details: [
             "Built a marketing agency landing page",
             "Ensured high performance and SEO optimization."
-        ]
+        ],
+        type: ProjectType.website,
+        kind: ProjectKind.client
     },
     {
         projectName: "microcam",
@@ -51,7 +55,9 @@ export const ClientProjectList: Project[] = [
             "Implemented a custom CMS for managing product listings.",
             "Integrated inquiry forms and lead management systems.",
             "Focused on building a secure and scalable architecture."
-        ]
+        ],
+        type: ProjectType.website,
+        kind: ProjectKind.client
     },
     {
         projectName: "instakit",
@@ -68,11 +74,10 @@ export const ClientProjectList: Project[] = [
             "Created an automated media kit generator for influencers.",
             "Implemented server-side PDF generation for kits.",
             "Streamlined the user onboarding and payment process."
-        ]
-    }
-]
-
-export const PersonalProjectList: Project[] = [
+        ],
+        type: ProjectType.website,
+        kind: ProjectKind.client
+    },
     {
         projectName: "jsonbazaar",
         imageSrc: "/opengraph-image1.png",
@@ -91,7 +96,9 @@ export const PersonalProjectList: Project[] = [
             "Designed the platform to provide realistic JSON data for frontend development.",
             "Created a simple and developer-friendly interface for quick API testing.",
             "Ensured fast and scalable API responses suitable for development environments."
-        ]
+        ],
+        type: ProjectType.website,
+        kind: ProjectKind.client
     },
     {
         projectName: "mock3wallet",
@@ -114,7 +121,9 @@ export const PersonalProjectList: Project[] = [
             "Built transaction state tracking to simulate real wallet behavior.",
             "Structured the backend using a clean MVC architecture for scalability and maintainability.",
             "Simulated real-world Web3 wallet workflows to create a learning environment before blockchain integration."
-        ]
+        ],
+        type: ProjectType.mobile,
+        kind: ProjectKind.client
     },
     {
         projectName: "pixsy",
@@ -132,6 +141,32 @@ export const PersonalProjectList: Project[] = [
             "Implemented image sharing, likes, and comments.",
             "Developed a real-time chat system using Firebase Firestore.",
             "Focused on creating a smooth and engaging user experience."
-        ]
+        ],
+        type: ProjectType.mobile,
+        kind: ProjectKind.client
     }
 ]
+
+export const PersonalProjectList: Project[] = [
+    {
+        projectName: "portfolio v2",
+        imageSrc: "/opengraph-image1.png",
+        desc: "My personal developer portfolio.",
+        link: "https://github.com/vivekupasani/portfolio-v2",
+        timeline: "Jan 2026 - Present",
+        category: "Web Development",
+        timelineMobile: "January 2026 - Present",
+        categoryMobile: "Website Dev",
+        slug: "portfolio-v2",
+        techStack: ["Next.js", "Typescript", "Tailwind CSS", "Framer Motion"],
+        details: [
+            "Designed and built a modern portfolio using Next.js and Framer Motion.",
+            "Implemented dark mode, smooth animations, and responsive layout.",
+            "Showcasing personal and client projects with detailed case studies."
+        ],
+        type: ProjectType.website,
+        kind: ProjectKind.personal
+    }
+]
+
+export const AllProjects: Project[] = [...ClientProjectList, ...PersonalProjectList];
