@@ -2,6 +2,26 @@ import { Project, ProjectKind, ProjectType } from "@/lib/types";
 
 export const ClientProjectList: Project[] = [
     {
+        projectName: "luxora",
+        imageSrc: "/opengraph-image1.png",
+        desc: "e-commerce website for jewelry",
+        link: "https://online-jewelry-shop-ecommerce.vercel.app/",
+        timeline: "March 2026 - Present",
+        category: "Web Development",
+        timelineMobile: "March 2026 - Present",
+        categoryMobile: "Website Dev",
+        slug: "luxora",
+        techStack: ["typescript", "Next.js", "Tailwind CSS", "Motion", "Supabase", "Dodopayments"],
+        details: [
+            "Product Catalog: Users can browse a wide collection of jewelry items with high-quality images, detailed descriptions, and pricing.",
+            "Shopping Cart: Users can add products to the cart, update quantities, and manage selected items before purchase.",
+            "Secure Checkout: Users can complete their purchase with a smooth and secure checkout process including payment integration.",
+            "Order Management: Users can track their orders, view order history, and manage their purchases easily."
+        ],
+        type: ProjectType.website,
+        kind: ProjectKind.client
+    },
+    {
         projectName: "hooked",
         imageSrc: "/hookd-logo.png",
         desc: "analyze your video to increase retention.",
@@ -98,7 +118,7 @@ export const ClientProjectList: Project[] = [
             "Ensured fast and scalable API responses suitable for development environments."
         ],
         type: ProjectType.website,
-        kind: ProjectKind.client
+        kind: ProjectKind.personal
     },
     {
         projectName: "mock3wallet",
@@ -123,7 +143,30 @@ export const ClientProjectList: Project[] = [
             "Simulated real-world Web3 wallet workflows to create a learning environment before blockchain integration."
         ],
         type: ProjectType.mobile,
-        kind: ProjectKind.client
+        kind: ProjectKind.personal
+    },
+    {
+        projectName: "medremind",
+        imageSrc: "/opengraph-image1.png",
+        desc: "Web3 wallet simulator",
+        link: "https://github.com/vivekupasani/medremind",
+        timeline: "March 2026 - March 2026",
+        category: "App Development",
+        timelineMobile: "March 2026 - March 2026",
+        categoryMobile: "App Dev",
+        slug: "medremind",
+        techStack: ["React Native", "TypeScript", "AsyncStorage"],
+        details: [
+            "Medication Scheduling: Set up medication schedules with custom reminders for timely doses.",
+            "Refill Tracking: Monitor medicine supply and get alerts for refills.",
+            "Cross-Platform Support: Works seamlessly on both iOS and Android devices.",
+            "Biometric Authentication: Secure access using Face ID or Touch ID.",
+            "Progress Tracking: Track daily medication intake with history logs.",
+            "Calendar Integration: Manage doses efficiently with calendar support.",
+            "Secure Storage: Safely store data locally using AsyncStorage."
+        ],
+        type: ProjectType.mobile,
+        kind: ProjectKind.personal
     },
     {
         projectName: "pixsy",
@@ -143,7 +186,47 @@ export const ClientProjectList: Project[] = [
             "Focused on creating a smooth and engaging user experience."
         ],
         type: ProjectType.mobile,
-        kind: ProjectKind.client
+        kind: ProjectKind.personal
+    },
+    {
+        projectName: "chatapp",
+        imageSrc: "/opengraph-image1.png",
+        desc: "real-time chat application",
+        link: "https://github.com/vivekupasani/chatapp",
+        timeline: "July 2024 - August 2024",
+        category: "App Development",
+        timelineMobile: "July 2024 - August 2024",
+        categoryMobile: "App Dev",
+        slug: "chatapp",
+        techStack: ["Android", "Firebase", "Kotlin"],
+        details: [
+            "User Authentication: Sign up and login functionality.",
+            "Profile Setup: Users can create and update their profile with name, profile picture, and about info.",
+            "Friend Requests: Send, receive, and accept friend requests.",
+            "Text Messaging: Chat with other users through instant messages.",
+            "Image Sharing: Send and receive images in chat.",
+            "Status Updates: Upload and view status updates from other users.",
+            "Theme Support: Supports both light and dark themes for a consistent user experience."
+        ],
+        type: ProjectType.mobile,
+        kind: ProjectKind.personal
+    },
+    {
+        projectName: "syncra",
+        imageSrc: "/opengraph-image1.png",
+        desc: "ai powered voice assistant",
+        link: "https://github.com/vivekupasani/syncra",
+        timeline: "July 2024 - August 2024",
+        category: "App Development",
+        timelineMobile: "July 2024 - August 2024",
+        categoryMobile: "App Dev",
+        slug: "syncra",
+        techStack: ["flutter", "gemini", "firebase"],
+        details: [
+            "Get AI-generated answers and assistance in real time",
+        ],
+        type: ProjectType.mobile,
+        kind: ProjectKind.personal
     }
 ]
 
