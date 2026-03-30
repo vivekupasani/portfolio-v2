@@ -2,6 +2,27 @@ import { Project, ProjectKind, ProjectType } from "@/lib/types";
 
 export const ClientProjectList: Project[] = [
     {
+        projectName: "whispy",
+        imageSrc: "/whispy.png",
+        desc: "effortless AI voice detection",
+        link: "https://github.com/vivekupasani/whispy",
+        timeline: "March 2026",
+        category: "Desktop App Development",
+        timelineMobile: "March 2026",
+        categoryMobile: "Desktop App Dev",
+        slug: "whispy",
+        techStack: ["typescript", "React.js", "Electron.js", "Tailwind CSS"],
+        details: [
+            "Push-to-talk recording, hold a key, speak, and release to transcribe instantly.",
+            "Fast speech-to-text powered by Groq’s Whisper Large V3.",
+            "Optional AI refinement to clean up grammar and remove filler words.",
+            "Customizable hotkeys (Option, Command, Control, or F1–F12).",
+            "Auto-pastes text into any active app while running quietly in the tray."
+        ],
+        type: ProjectType.website,
+        kind: ProjectKind.client
+    },
+    {
         projectName: "luxora",
         imageSrc: "/opengraph-image1.png",
         desc: "e-commerce website for jewelry",

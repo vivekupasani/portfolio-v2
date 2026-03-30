@@ -82,7 +82,7 @@ export default function HomeClient() {
                 <motion.div variants={fadeUp} className="mt-8">
                     <Title title="currently" />
                     <p className="mt-4 text-zinc-600 leading-relaxed text-[15px]">
-                        I&apos;m currently working as a freelance full-stack and mobile engineer, and
+                        I&apos;m currently working as a freelance full-stack and mobile engineer, also
                         building{" "}
                         <Link
                             href="https://app.cluezy.site"
@@ -91,7 +91,15 @@ export default function HomeClient() {
                         >
                             @cluezy
                         </Link>
-                        , my own agentic AI research engine.
+                        {" "}(agentic AI research engine) and {" "}
+                        <Link
+                            href="https://github.com/vivekupasani/whispy"
+                            className="text-blue-600 hover:underline font-medium"
+                            target="_blank"
+                        >
+                            @whispy
+                        </Link>
+                        {" "}(effortless AI voice detection).
                     </p>
                 </motion.div>
 
@@ -99,7 +107,7 @@ export default function HomeClient() {
                 <motion.div variants={fadeUp} className="mt-8">
                     <Title title="where i've worked" href="/work" />
                     <div className="flex flex-col gap-1 mt-5">
-                        {WorkList.slice(0, 3).map((work, idx) => (
+                        {WorkList.slice(0, 4).map((work, idx) => (
                             <WorkedAt
                                 key={idx}
                                 work={work}

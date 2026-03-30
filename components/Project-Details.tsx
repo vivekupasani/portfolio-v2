@@ -69,7 +69,7 @@ export function ProjectDetails() {
                             {project.desc}
                         </p>
                     </div>
-                    <div className="relative shrink-0">
+                    {/* <div className="relative shrink-0">
                         <Image
                             src={project.imageSrc}
                             alt={project.projectName}
@@ -77,7 +77,7 @@ export function ProjectDetails() {
                             height={64}
                             className="rounded-xl size-16 ring-1 ring-zinc-200 shadow-sm object-cover"
                         />
-                    </div>
+                    </div> */}
                 </motion.div>
 
                 {/* Meta info */}
