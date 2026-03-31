@@ -9,6 +9,7 @@ export const Skills: string[] = [
     "express.js",
     "redis",
     "upstash",
+    "postgresql",
     "firebase",
     "supabase",
     "mongo db",
