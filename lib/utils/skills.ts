@@ -1,28 +1,44 @@
 export const Skills: string[] = [
+    // Languages
     "typescript",
     "javascript",
-    "next.js",
+
+    // Frontend
     "react.js",
-    "react native",
-    "flutter",
-    "node.js",
-    "express.js",
-    "redis",
-    "upstash",
-    "postgresql",
-    "firebase",
-    "supabase",
-    "mongo db",
-    "mysql",
-    "motion",
+    "next.js",
     "tailwind css",
+    "motion",
     "shadcn",
     "aceternity",
+
+    // Mobile
+    "react native",
+    "flutter",
+
+    // Backend
+    "node.js",
+    "express.js",
+    "drizzle",
+
+    // Databases
+    "postgresql",
+    "mysql",
+    "mongo db",
+    "firebase",
+    "supabase",
+    "redis",
+    "upstash",
+
+    // Tools
     "git",
     "github",
+    "vscode",
+    "cursor",
+
+    // Deployment / Platforms
     "vercel",
     "render",
-    "vscode",
-    "antigravity",
-    "cursor"
+
+    // Misc / Fun
+    "antigravity"
 ]

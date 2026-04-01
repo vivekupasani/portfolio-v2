@@ -132,7 +132,7 @@ export default function HomeClient() {
 
                 {/* ── Skills ── */}
                 <motion.div variants={fadeUp} className="mt-8">
-                    <Title title="skills" />
+                    <Title title="tech stack" />
                     <p className="mt-4 font-mono text-[13px] text-zinc-500 leading-relaxed">
                         {Skills.join(" • ")}
                     </p>
