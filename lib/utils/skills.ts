@@ -6,6 +6,9 @@ export const Skills: string[] = [
     // Frontend
     "react.js",
     "next.js",
+    "tanstack query",
+    "tanstack router",
+    "tanstack start",
     "tailwind css",
     "motion",
     "shadcn",
@@ -26,6 +29,7 @@ export const Skills: string[] = [
     "mongo db",
     "firebase",
     "supabase",
+    "neon db",
     "redis",
     "upstash",
 
