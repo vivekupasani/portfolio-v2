@@ -69,19 +69,10 @@ export function ProjectDetails() {
                             {project.desc}
                         </p>
                     </div>
-                    {/* <div className="relative shrink-0">
-                        <Image
-                            src={project.imageSrc}
-                            alt={project.projectName}
-                            width={64}
-                            height={64}
-                            className="rounded-xl size-16 ring-1 ring-zinc-200 shadow-sm object-cover"
-                        />
-                    </div> */}
                 </motion.div>
 
                 {/* Meta info */}
-                <motion.div variants={fadeUp} className="flex gap-8 mt-2 border-t border-zinc-100 py-6">
+                <motion.div variants={fadeUp} className="grid grid-cols-2 md:flex md:gap-12 gap-y-6 mt-2 border-t border-zinc-100 py-6">
                     <div className="flex flex-col gap-1">
                         <span className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider">Timeline</span>
                         <span className="text-sm font-medium text-zinc-700">{project.timeline}</span>
@@ -89,6 +80,18 @@ export function ProjectDetails() {
                     <div className="flex flex-col gap-1">
                         <span className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider">Type</span>
                         <span className="text-sm font-medium text-zinc-700 capitalize">{project.category}</span>
+                    </div>
+                    <div className="flex flex-col gap-1 col-span-2 md:col-span-1">
+                        <span className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider">Website</span>
+                        <Link
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm font-medium text-zinc-700 hover:text-zinc-900 transition-colors flex items-center gap-1.5 group underline decoration-zinc-200 underline-offset-4 hover:decoration-zinc-400"
+                        >
+                            {project.link.includes("github.com") ? "Github" : "Live Demo"}
+                            {/* <ExternalLink size={13} className="text-zinc-400 group-hover:text-zinc-900 transition-colors" /> */}
+                        </Link>
                     </div>
                 </motion.div>
 
