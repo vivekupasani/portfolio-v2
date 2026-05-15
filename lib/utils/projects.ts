@@ -23,21 +23,30 @@ export const ClientProjectList: Project[] = [
         kind: ProjectKind.client
     },
     {
-        projectName: "luxora",
-        imageSrc: "/opengraph-image1.png",
-        desc: "e-commerce website for jewelry",
-        link: "https://online-jewelry-shop-ecommerce.vercel.app/",
-        timeline: "March 2026 - Present",
-        category: "Web Development",
-        timelineMobile: "March 2026 - Present",
-        categoryMobile: "Website Dev",
-        slug: "luxora",
-        techStack: ["typescript", "Next.js", "Tailwind CSS", "Motion", "Supabase", "Dodopayments"],
+        projectName: "mr driving",
+        imageSrc: "/mr-driving.png",
+        desc: "open world browser car driving game",
+        link: "https://mr-driving.vercel.app/",
+        timeline: "May 2026",
+        category: "Game Development",
+        timelineMobile: "May 2026",
+        categoryMobile: "Game Dev",
+        slug: "mr-driving",
+        techStack: [
+            "Next.js",
+            "TypeScript",
+            "React Three Fiber",
+            "Three.js",
+            "Rapier Physics",
+            "Zustand",
+            "Tailwind CSS"
+        ],
         details: [
-            "Product Catalog: Users can browse a wide collection of jewelry items with high-quality images, detailed descriptions, and pricing.",
-            "Shopping Cart: Users can add products to the cart, update quantities, and manage selected items before purchase.",
-            "Secure Checkout: Users can complete their purchase with a smooth and secure checkout process including payment integration.",
-            "Order Management: Users can track their orders, view order history, and manage their purchases easily."
+            "Open-world style car driving game with realistic physics and responsive controls.",
+            "Free-roam driving experience across highways, city roads, and off-road environments.",
+            "Features drifting, nitro boost, collision mechanics, and dynamic camera modes.",
+            "Built with React Three Fiber and Rapier for smooth high-performance gameplay in the browser.",
+            "Immersive visuals with lighting effects, moving traffic props, and detailed environments."
         ],
         type: ProjectType.website,
         kind: ProjectKind.client
@@ -58,6 +67,26 @@ export const ClientProjectList: Project[] = [
             "Implemented real-time analytics and visualization tools.",
             "Designed a minimal and highly responsive user interface.",
             "Optimized video processing workflows for faster results."
+        ],
+        type: ProjectType.website,
+        kind: ProjectKind.client
+    },
+    {
+        projectName: "luxora",
+        imageSrc: "/opengraph-image1.png",
+        desc: "e-commerce website for jewelry",
+        link: "https://online-jewelry-shop-ecommerce.vercel.app/",
+        timeline: "March 2026 - Present",
+        category: "Web Development",
+        timelineMobile: "March 2026 - Present",
+        categoryMobile: "Website Dev",
+        slug: "luxora",
+        techStack: ["typescript", "Next.js", "Tailwind CSS", "Motion", "Supabase", "Dodopayments"],
+        details: [
+            "Product Catalog: Users can browse a wide collection of jewelry items with high-quality images, detailed descriptions, and pricing.",
+            "Shopping Cart: Users can add products to the cart, update quantities, and manage selected items before purchase.",
+            "Secure Checkout: Users can complete their purchase with a smooth and secure checkout process including payment integration.",
+            "Order Management: Users can track their orders, view order history, and manage their purchases easily."
         ],
         type: ProjectType.website,
         kind: ProjectKind.client

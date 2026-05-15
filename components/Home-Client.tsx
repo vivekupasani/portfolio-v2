@@ -47,7 +47,7 @@ export default function HomeClient() {
                 {/* ── Profile ── */}
                 <motion.div variants={fadeUp} className="mt-14">
                     <Image
-                        src="/vivek.png"
+                        src="/me.jpg"
                         alt="Vivek Upasani"
                         width={80}
                         height={80}
