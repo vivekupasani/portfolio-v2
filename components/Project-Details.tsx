@@ -62,9 +62,9 @@ export function ProjectDetails() {
                 {/* Header */}
                 <motion.div variants={fadeUp} className="flex items-start justify-between">
                     <div className="flex flex-col">
-                        <Link href={project.link} className="text-3xl font-semibold tracking-tight underline">
+                        <div className="text-3xl font-semibold tracking-tight">
                             {project.projectName}
-                        </Link>
+                        </div>
                         <p className="text-zinc-500 mt-2 text-[16px]">
                             {project.desc}
                         </p>
