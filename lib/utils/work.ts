@@ -2,15 +2,15 @@ import { Work } from "@/lib/types";
 
 export const WorkList: Work[] = [
     {
-        companyName: "cluezy - my saas",
+        companyName: "Acernity",
         imageSrc: "/cluezy.png",
-        role: "indie hacker project",
-        link: "https://cluezy.site/",
+        role: "full stack developer freelance",
+        link: "https://www.linkedin.com/company/acernityhq/",
         location: "Gujarat, India (Remote)",
-        timeline: "Dec 2025 - Present",
+        timeline: "Jan 2026 - Present",
         locationMobile: "ind - Remote",
-        timelineMobile: "December 2025 - Present",
-        slug: "cluezy",
+        timelineMobile: "Jan 2026 - Present",
+        slug: "acernity",
         techStack: ["Next.js", "Typescript", "Tailwind CSS", "Vercel AISDK", "Redis", "Upstash", "Supabase", "Zod", "Vercel", "Exa", "Stripe"],
         details: [
             "Developed an AI-powered research and productivity platform with a unified AI interface.",
