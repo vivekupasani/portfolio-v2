@@ -82,24 +82,26 @@ export default function HomeClient() {
                 <motion.div variants={fadeUp} className="mt-8">
                     <Title title="currently" />
                     <p className="mt-4 text-zinc-600 leading-relaxed text-[15px]">
-                        I&apos;m currently working as a freelance full-stack and mobile engineer, also
-                        building{" "}
-                        <Link
-                            href="https://app.cluezy.site"
-                            className="text-blue-600 hover:underline font-medium"
-                            target="_blank"
-                        >
-                            @cluezy
-                        </Link>
-                        {" "}(agentic AI research engine) and {" "}
-                        <Link
-                            href="https://github.com/vivekupasani/whispy"
-                            className="text-blue-600 hover:underline font-medium"
-                            target="_blank"
-                        >
-                            @whispy
-                        </Link>
-                        {" "}(effortless AI voice detection).
+                        I&apos;m currently working as a freelance full-stack and mobile engineer<span className="inline md:hidden">.</span><span className="hidden md:inline">
+                            , also
+                            building{" "}
+                            <Link
+                                href="https://app.cluezy.site"
+                                className="text-blue-600 hover:underline font-medium"
+                                target="_blank"
+                            >
+                                @cluezy
+                            </Link>
+                            {" "}(agentic AI research engine) and {" "}
+                            <Link
+                                href="https://github.com/vivekupasani/whispy"
+                                className="text-blue-600 hover:underline font-medium"
+                                target="_blank"
+                            >
+                                @whispy
+                            </Link>
+                            {" "}(effortless AI voice detection).
+                        </span>
                     </p>
                 </motion.div>
 
