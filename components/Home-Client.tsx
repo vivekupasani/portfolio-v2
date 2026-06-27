@@ -47,7 +47,7 @@ export default function HomeClient() {
                 {/* ── Profile ── */}
                 <motion.div variants={fadeUp} className="mt-14">
                     <Image
-                        src="/me.jpg"
+                        src="/me.png"
                         alt="Vivek Upasani"
                         width={80}
                         height={80}
@@ -133,8 +133,12 @@ export default function HomeClient() {
                 {/* ── Skills ── */}
                 <motion.div variants={fadeUp} className="mt-8">
                     <Title title="tech stack" />
-                    <p className="mt-4 font-mono text-[13px] text-zinc-500 leading-relaxed">
-                        {Skills.join(" • ")}
+                    <p className="mt-4 font-mono text-[12px] text-zinc-500 leading-relaxed flex flex-wrap gap-2">
+                        {Skills.map((skill, idx) => (
+                            <span key={idx} className="border-2 border-dotted rounded-md px-2">
+                                {skill}
+                            </span>
+                        ))}
                     </p>
                 </motion.div>
 
