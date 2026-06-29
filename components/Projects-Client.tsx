@@ -63,17 +63,17 @@ export default function ProjectsClient() {
                 className="flex flex-col font-sans py-10 px-6 md:px-0 max-w-xl mx-auto"
             >
                 {/* ── Back Link ── */}
-                <motion.div variants={fadeUp}>
+                {/* <motion.div variants={fadeUp}>
                     <Link
                         href="/"
                         className="text-zinc-400 hover:text-zinc-600 text-[13px] font-mono transition-colors"
                     >
                         ← go back
                     </Link>
-                </motion.div>
+                </motion.div> */}
 
                 {/* ── Header ── */}
-                <motion.div variants={fadeUp} className="mt-8">
+                <motion.div variants={fadeUp} className="">
                     <h1 className="text-3xl font-semibold tracking-tight">
                         projects
                     </h1>

@@ -49,17 +49,17 @@ export function WorkDetails() {
                 className="flex flex-col font-sans py-10 px-6 md:px-0 max-w-xl mx-auto"
             >
                 {/* Back Link */}
-                <div>
+                {/* <div>
                     <Link
                         href="/work"
                         className="inline-flex items-center gap-2 font-mono text-zinc-400 hover:text-zinc-900 transition-colors text-[13px] mb-8 group"
                     >
                         ← go back
                     </Link>
-                </div>
+                </div> */}
 
                 {/* Header */}
-                <motion.div variants={fadeUp} className="flex items-start justify-between">
+                <motion.div variants={fadeUp} className="flex items-start justify-between mt-0">
                     <div className="flex flex-col">
                         <h1 className="text-3xl font-semibold tracking-tight">
                             {work.companyName}

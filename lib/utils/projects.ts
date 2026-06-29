@@ -2,6 +2,33 @@ import { Project, ProjectKind, ProjectType } from "@/lib/types";
 
 export const ClientProjectList: Project[] = [
     {
+        projectName: "cluezy",
+        imageSrc: "/cluezy.png",
+        desc: "Agentic AI Research Engine",
+        link: "https://cluezy.site",
+        timeline: "Dec 2025 - Feb 2026",
+        category: "Web Development",
+        timelineMobile: "Dec 2025 - Feb 2026",
+        categoryMobile: "Web dev",
+        slug: "cluezy",
+        techStack: ["Next.js", "Typescript", "Tailwind CSS", "Vercel AISDK", "Redis", "Upstash", "Supabase", "Zod", "Vercel", "Exa", "Stripe"],
+        details: [
+            "Developed an AI-powered research and productivity platform with a unified AI interface.",
+            "Integrated web search, academic search, Reddit research, weather queries, GitHub search, and X (Twitter) search in one place.",
+            "Enabled multi-source information retrieval to simplify research and data discovery.",
+            "Implemented multi-format content processing for documents and media.",
+            "Allowed users to upload and analyze PDFs, DOC, and PPT files directly within the platform.",
+            "Built features to summarize website content and extract key insights automatically.",
+            "Added support to analyze and summarize YouTube videos using AI.",
+            "Developed functionality to chat with uploaded documents for interactive document understanding.",
+            "Integrated third-party applications for seamless productivity workflows.",
+            "Enabled users to connect Gmail, Google Drive, Google Docs, and Google Sheets with the platform.",
+            "Implemented natural language queries to interact with external apps and data easily."
+        ],
+        type: ProjectType.website,
+        kind: ProjectKind.client
+    },
+    {
         projectName: "whispy",
         imageSrc: "/whispy.png",
         desc: "effortless AI voice detection",
@@ -18,6 +45,26 @@ export const ClientProjectList: Project[] = [
             "Optional AI refinement to clean up grammar and remove filler words.",
             "Customizable hotkeys (Option, Command, Control, or F1–F12).",
             "Auto-pastes text into any active app while running quietly in the tray."
+        ],
+        type: ProjectType.website,
+        kind: ProjectKind.client
+    },
+       {
+        projectName: "luxora",
+        imageSrc: "/opengraph-image1.png",
+        desc: "e-commerce website for jewelry",
+        link: "https://online-jewelry-shop-ecommerce.vercel.app/",
+        timeline: "March 2026 - Present",
+        category: "Web Development",
+        timelineMobile: "March 2026 - Present",
+        categoryMobile: "Website Dev",
+        slug: "luxora",
+        techStack: ["typescript", "Next.js", "Tailwind CSS", "Motion", "Supabase", "Dodopayments"],
+        details: [
+            "Product Catalog: Users can browse a wide collection of jewelry items with high-quality images, detailed descriptions, and pricing.",
+            "Shopping Cart: Users can add products to the cart, update quantities, and manage selected items before purchase.",
+            "Secure Checkout: Users can complete their purchase with a smooth and secure checkout process including payment integration.",
+            "Order Management: Users can track their orders, view order history, and manage their purchases easily."
         ],
         type: ProjectType.website,
         kind: ProjectKind.client
@@ -67,26 +114,6 @@ export const ClientProjectList: Project[] = [
             "Implemented real-time analytics and visualization tools.",
             "Designed a minimal and highly responsive user interface.",
             "Optimized video processing workflows for faster results."
-        ],
-        type: ProjectType.website,
-        kind: ProjectKind.client
-    },
-    {
-        projectName: "luxora",
-        imageSrc: "/opengraph-image1.png",
-        desc: "e-commerce website for jewelry",
-        link: "https://online-jewelry-shop-ecommerce.vercel.app/",
-        timeline: "March 2026 - Present",
-        category: "Web Development",
-        timelineMobile: "March 2026 - Present",
-        categoryMobile: "Website Dev",
-        slug: "luxora",
-        techStack: ["typescript", "Next.js", "Tailwind CSS", "Motion", "Supabase", "Dodopayments"],
-        details: [
-            "Product Catalog: Users can browse a wide collection of jewelry items with high-quality images, detailed descriptions, and pricing.",
-            "Shopping Cart: Users can add products to the cart, update quantities, and manage selected items before purchase.",
-            "Secure Checkout: Users can complete their purchase with a smooth and secure checkout process including payment integration.",
-            "Order Management: Users can track their orders, view order history, and manage their purchases easily."
         ],
         type: ProjectType.website,
         kind: ProjectKind.client

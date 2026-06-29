@@ -2,7 +2,7 @@ import { Work } from "@/lib/types";
 
 export const WorkList: Work[] = [
     {
-        companyName: "Acernity",
+        companyName: "acernity",
         imageSrc: "/cluezy.png",
         role: "full stack developer freelance",
         link: "https://www.linkedin.com/company/acernityhq/",

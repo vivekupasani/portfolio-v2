@@ -35,17 +35,20 @@ const fadeUp: Variants = {
     },
 };
 
+let hasLoaded = false;
+
 export default function HomeClient() {
     return (
         <section className="bg-zinc-50 text-zinc-900 min-h-svh">
             <motion.div
                 variants={container}
-                initial="hidden"
+                initial={hasLoaded ? "show" : "hidden"}
                 animate="show"
+                onAnimationComplete={() => { hasLoaded = true; }}
                 className="flex flex-col font-sans py-10 px-6 md:px-0 max-w-xl mx-auto"
             >
                 {/* ── Profile ── */}
-                <motion.div variants={fadeUp} className="mt-14">
+                <motion.div variants={fadeUp} className="mt-4">
                     <Image
                         src="/me.png"
                         alt="Vivek Upasani"
