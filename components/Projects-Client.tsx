@@ -73,7 +73,7 @@ export default function ProjectsClient() {
                 </motion.div> */}
 
                 {/* ── Header ── */}
-                <motion.div variants={fadeUp} className="">
+                <motion.div variants={fadeUp} className="mt-2">
                     <h1 className="text-3xl font-semibold tracking-tight">
                         projects
                     </h1>

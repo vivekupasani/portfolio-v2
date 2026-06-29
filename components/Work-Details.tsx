@@ -59,7 +59,7 @@ export function WorkDetails() {
                 </div> */}
 
                 {/* Header */}
-                <motion.div variants={fadeUp} className="flex items-start justify-between mt-0">
+                <motion.div variants={fadeUp} className="flex items-start justify-between mt-2">
                     <div className="flex flex-col">
                         <h1 className="text-3xl font-semibold tracking-tight">
                             {work.companyName}
