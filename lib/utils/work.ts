@@ -4,7 +4,7 @@ export const WorkList: Work[] = [
     {
         companyName: "acernity",
         imageSrc: "/cluezy.png",
-        role: "full stack developer freelance",
+        role: "building my own products",
         link: "https://www.linkedin.com/company/acernityhq/",
         location: "Gujarat, India (Remote)",
         timeline: "Jan 2026 - Present",
