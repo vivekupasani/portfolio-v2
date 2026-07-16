@@ -49,7 +49,27 @@ export const ClientProjectList: Project[] = [
         type: ProjectType.website,
         kind: ProjectKind.client
     },
-       {
+    {
+        projectName: "create.design",
+        imageSrc: "/opengraph-image1.png",
+        desc: "AI Design Generator",
+        link: "https://create-design.cluezy.site",
+        timeline: "March 2026 - Present",
+        category: "Web Development",
+        timelineMobile: "July 2026 - Present",
+        categoryMobile: "Website Dev",
+        slug: "create-design",
+        techStack: ["typescript", "Next.js", "Tailwind CSS", "Motion", "Supabase", "Dodopayments"],
+        details: [
+            " Currently building create.design an AI powered platform that transforms natural language prompts into polished, editable UI designs within seconds.",
+            " Implementing AI driven design workflows that enable users to generate, refine, and iterate on designs through conversational prompts.",
+            " Implementing support for exporting generated designs in Figma, PNG, JPG, and SVG formats for seamless editing, sharing, and developer handoff.",
+            "Designed a responsive UI with light/dark mode support."
+        ],
+        type: ProjectType.website,
+        kind: ProjectKind.client
+    },
+    {
         projectName: "luxora",
         imageSrc: "/opengraph-image1.png",
         desc: "e-commerce website for jewelry",

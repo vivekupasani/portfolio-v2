@@ -85,9 +85,10 @@ export default function HomeClient() {
                 <motion.div variants={fadeUp} className="mt-8">
                     <Title title="currently" />
                     <p className="mt-4 text-zinc-600 leading-relaxed text-[15px]">
-                        I&apos;m currently working as a freelance full-stack and mobile engineer<span className="inline md:hidden">.</span><span className="hidden md:inline">
-                            , also
-                            building{" "}
+                        I&apos;m currently working as a freelance web developer. Previously, I completed a software engineering internship.
+                        {/* <span className="inline md:hidden">.</span> */}
+                        {/* <span className="hidden md:inline">
+                            {" "}I'm also building{" "}
                             <Link
                                 href="https://app.cluezy.site"
                                 className="text-blue-600 hover:underline font-medium"
@@ -95,16 +96,16 @@ export default function HomeClient() {
                             >
                                 @cluezy
                             </Link>
-                            {" "}(agentic AI research engine) and {" "}
+                            {" "} an agentic AI research engine, and{" "}
                             <Link
                                 href="https://github.com/vivekupasani/whispy"
                                 className="text-blue-600 hover:underline font-medium"
                                 target="_blank"
                             >
                                 @whispy
-                            </Link>
-                            {" "}(effortless AI voice detection).
-                        </span>
+                            </Link> 
+                            {" "} an AI powered voice dictation app.
+                        </span> */}
                     </p>
                 </motion.div>
 

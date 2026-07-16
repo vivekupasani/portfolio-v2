@@ -101,7 +101,7 @@ export default function ProjectsClient() {
 
                     {/* Minimalist Filters */}
                     <div className="flex flex-wrap items-center gap-x-6 gap-y-2 ml-1 text-[12px] font-mono text-zinc-400">
-                        <div className="flex items-center gap-3">
+                        {/* <div className="flex items-center gap-3">
                             <span className="text-zinc-300 uppercase tracking-widest text-[10px]">Kind:</span>
                             {(["all", ProjectKind.client, ProjectKind.personal] as const).map((k) => (
                                 <button
@@ -113,9 +113,9 @@ export default function ProjectsClient() {
                                     {k}
                                 </button>
                             ))}
-                        </div>
+                        </div> */}
 
-                        <div className="w-px h-3 bg-zinc-200" />
+                        {/* <div className="w-px h-3 bg-zinc-200" /> */}
 
                         <div className="flex items-center gap-3">
                             <span className="text-zinc-300 uppercase tracking-widest text-[10px]">Type:</span>
