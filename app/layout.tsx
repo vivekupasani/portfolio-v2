@@ -66,7 +66,7 @@ export default function RootLayout({
         <main className="pt-12 flex-1">
           {children}
         </main>
-        <footer className="pt-12">
+        <footer className="pt-12 pb-6 md:pb-0">
           <div className="px-6 md:px-0">
             <div className="rounded-xl border border-zinc-100 bg-zinc-50/50 p-6 flex flex-col gap-6">
               <div className="w-full max-w-lg mx-auto flex items-start justify-between gap-12">
