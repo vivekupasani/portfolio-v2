@@ -37,7 +37,7 @@ export default function WorkClient() {
                 <motion.div variants={fadeUp} className="rounded-xl bg-zinc-50/50 border border-zinc-100 p-5">
                     <div className="flex flex-col gap-1">
                         <h1 className="text-xl font-medium text-zinc-500">
-                            work
+                            work experience
                         </h1>
                         <p className="text-zinc-400 text-sm leading-relaxed">
                             my professional journey and contributions.
