@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import WorkClient from "@/components/Work-Client";
 
 export const metadata: Metadata = {
-  title: "Work",
+  title: "Work Experience",
   description: "A history of my professional journey, roles, and contributions in various companies and projects.",
 };
 

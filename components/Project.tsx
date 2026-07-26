@@ -1,5 +1,4 @@
-import { ArrowUpRight, ExternalLink, Link2 } from "lucide-react";
-import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { Project } from "@/lib/types";
@@ -18,53 +17,34 @@ export const ProjectTile = ({
     return (
         <MotionLink
             href={`/projects/${project.slug}`}
-            className="flex items-start md:items-center gap-4 py-3 px-4 -mx-4 rounded-lg hover:bg-zinc-100 transition-all duration-200 group"
+            className="group relative flex items-start md:items-center gap-2 py-2 px-2 -mx-2 rounded-lg transition-colors duration-200 hover:bg-zinc-50"
             transition={{ type: "spring" as const, stiffness: 400, damping: 25 }}
         >
-            {/* <div className="relative shrink-0 mt-1 md:mt-0">
-                <Image
-                    src={project.imageSrc}
-                    alt={project.projectName}
-                    height={36}
-                    width={36}
-                    className="size-9 rounded-lg border border-zinc-200"
-                />
-            </div> */}
-
             <div className="flex items-center justify-between w-full">
-
-                {/* LEFT SIDE */}
-                <div className="flex flex-col">
-                    <span className="flex items-center gap-2 font-medium text-zinc-900 text-[15px]">
+                <div className="flex flex-col gap-0.5">
+                    <span className="flex items-center gap-1 font-medium text-zinc-500 text-sm">
                         {project.projectName}
+                        <ArrowUpRight size={12} className="text-zinc-300 -translate-y-0.5 opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all duration-200" />
                     </span>
-
-                    <p className="text-[13px] text-zinc-400 leading-normal">
+                    <p className="text-[13px] text-zinc-500 leading-normal">
                         {project.desc}
                     </p>
-                    {showTechStack && (
-                        <div className="flex flex-wrap gap-1 mt-1 text-[11px] text-zinc-400/80">
-                            {project.techStack.join(" • ")}
+                    <span className="flex md:hidden text-[12px] text-zinc-500">{project.timelineMobile}</span>
+                    {/* {showTechStack && (
+                        <div className="flex flex-wrap gap-1 mt-1 text-[11px] text-zinc-300">
+                            {project.techStack.join(" · ")}
                         </div>
-                    )}
-                    <span className="flex md:hidden text-neutral-300 font-normal text-sm">{project.timelineMobile}</span>
+                    )} */}
                 </div>
 
-                {/* RIGHT SIDE */}
-                <div className="flex flex-col items-end justify-center text-right">
-
-                    {/* DESKTOP */}
-                    <div className="hidden md:flex flex-col items-end">
-                        <span className="text-[13px] font-medium text-zinc-600">
-                            {project.timeline}
-                        </span>
-                        <span className="text-[13px] text-zinc-400">
-                            {project.category}
-                        </span>
-                    </div>
-
+                <div className="hidden md:flex flex-col items-end text-right shrink-0">
+                    <span className="text-[12px] font-medium text-zinc-500">
+                        {project.timeline}
+                    </span>
+                    <span className="text-[12px] text-zinc-500">
+                        {project.category}
+                    </span>
                 </div>
-
             </div>
         </MotionLink>
     );

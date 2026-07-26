@@ -1,31 +1,31 @@
 import { Work } from "@/lib/types";
 
 export const WorkList: Work[] = [
-    {
-        companyName: "acernity",
-        imageSrc: "/cluezy.png",
-        role: "building my own products",
-        link: "https://www.linkedin.com/company/acernityhq/",
-        location: "Gujarat, India (Remote)",
-        timeline: "Jan 2026 - Present",
-        locationMobile: "ind - Remote",
-        timelineMobile: "Jan 2026 - Present",
-        slug: "acernity",
-        techStack: ["Next.js", "Typescript", "Tailwind CSS", "Vercel AISDK", "Redis", "Upstash", "Supabase", "Zod", "Vercel", "Exa", "Stripe"],
-        details: [
-            "Developed an AI-powered research and productivity platform with a unified AI interface.",
-            "Integrated web search, academic search, Reddit research, weather queries, GitHub search, and X (Twitter) search in one place.",
-            "Enabled multi-source information retrieval to simplify research and data discovery.",
-            "Implemented multi-format content processing for documents and media.",
-            "Allowed users to upload and analyze PDFs, DOC, and PPT files directly within the platform.",
-            "Built features to summarize website content and extract key insights automatically.",
-            "Added support to analyze and summarize YouTube videos using AI.",
-            "Developed functionality to chat with uploaded documents for interactive document understanding.",
-            "Integrated third-party applications for seamless productivity workflows.",
-            "Enabled users to connect Gmail, Google Drive, Google Docs, and Google Sheets with the platform.",
-            "Implemented natural language queries to interact with external apps and data easily."
-        ]
-    },
+    // {
+    //     companyName: "acernity",
+    //     imageSrc: "/cluezy.png",
+    //     role: "building my own products",
+    //     link: "https://www.linkedin.com/company/acernityhq/",
+    //     location: "Gujarat, India (Remote)",
+    //     timeline: "Jan 2026 - Present",
+    //     locationMobile: "ind - Remote",
+    //     timelineMobile: "Jan 2026 - Present",
+    //     slug: "acernity",
+    //     techStack: ["Next.js", "Typescript", "Tailwind CSS", "Vercel AISDK", "Redis", "Upstash", "Supabase", "Zod", "Vercel", "Exa", "Stripe"],
+    //     details: [
+    //         "Developed an AI-powered research and productivity platform with a unified AI interface.",
+    //         "Integrated web search, academic search, Reddit research, weather queries, GitHub search, and X (Twitter) search in one place.",
+    //         "Enabled multi-source information retrieval to simplify research and data discovery.",
+    //         "Implemented multi-format content processing for documents and media.",
+    //         "Allowed users to upload and analyze PDFs, DOC, and PPT files directly within the platform.",
+    //         "Built features to summarize website content and extract key insights automatically.",
+    //         "Added support to analyze and summarize YouTube videos using AI.",
+    //         "Developed functionality to chat with uploaded documents for interactive document understanding.",
+    //         "Integrated third-party applications for seamless productivity workflows.",
+    //         "Enabled users to connect Gmail, Google Drive, Google Docs, and Google Sheets with the platform.",
+    //         "Implemented natural language queries to interact with external apps and data easily."
+    //     ]
+    // },
     {
         companyName: "boulevard legacy llc",
         imageSrc: "https://www.boulevardlegacy.com/lovable-uploads/fb17db3b-0058-4ca2-9f6a-59f6598894dd.png",

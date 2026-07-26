@@ -2,7 +2,6 @@
 
 import { motion, Variants } from "motion/react";
 import Image from "next/image";
-import Link from "next/link";
 
 import { ProjectTile } from "@/components/Project";
 import { Title } from "@/components/Title";
@@ -10,145 +9,108 @@ import { WorkedAt } from "@/components/Work";
 import { ClientProjectList } from "@/lib/utils/projects";
 import { Skills } from "@/lib/utils/skills";
 import { WorkList } from "@/lib/utils/work";
-import { Footer } from "@/components/Footer";
-
-/* ------------------ Animations ------------------ */
 
 const container: Variants = {
     hidden: { opacity: 0 },
     show: {
         opacity: 1,
         transition: {
-            staggerChildren: 0.06,
-            delayChildren: 0.1,
+            staggerChildren: 0.08,
+            delayChildren: 0.15,
         },
     },
 };
 
 const fadeUp: Variants = {
-    hidden: { opacity: 0, y: 16, filter: "blur(8px)" },
+    hidden: { opacity: 0, y: 20, filter: "blur(6px)" },
     show: {
         opacity: 1,
         y: 0,
         filter: "blur(0px)",
-        transition: { duration: 0.55, ease: [0.25, 0.46, 0.45, 0.94] },
+        transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
     },
 };
 
-let hasLoaded = false;
-
 export default function HomeClient() {
     return (
-        <section className="bg-zinc-50 text-zinc-900 min-h-svh">
+        <section className="bg-white text-zinc-900 min-h-svh">
             <motion.div
                 variants={container}
-                initial={hasLoaded ? "show" : "hidden"}
+                initial="hidden"
                 animate="show"
-                onAnimationComplete={() => { hasLoaded = true; }}
-                className="flex flex-col font-sans py-10 px-6 md:px-0 max-w-xl mx-auto"
+                className="flex flex-col font-sans pt-16 px-6 md:px-0 max-w-xl mx-auto"
             >
-                {/* ── Profile ── */}
-                <motion.div variants={fadeUp} className="mt-4">
-                    <Image
-                        src="/me.png"
-                        alt="Vivek Upasani"
-                        width={80}
-                        height={80}
-                        className="rounded-xl h-20 w-20 ring-1 ring-zinc-200 shadow-sm object-cover"
-                    />
-
-                    <h1 className="text-2xl font-semibold mt-4 flex items-center gap-1.5">
-                        vivek upasani
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="18"
-                            height="18"
-                            viewBox="0 0 48 48"
-                            className="inline-block"
-                        >
-                            <polygon
-                                fill="#42a5f5"
-                                points="29.62,3 33.053,8.308 39.367,8.624 39.686,14.937 44.997,18.367 42.116,23.995 45,29.62 39.692,33.053 39.376,39.367 33.063,39.686 29.633,44.997 24.005,42.116 18.38,45 14.947,39.692 8.633,39.376 8.314,33.063 3.003,29.633 5.884,24.005 3,18.38 8.308,14.947 8.624,8.633 14.937,8.314 18.367,3.003 23.995,5.884"
+                <motion.div variants={fadeUp} className="rounded-xl bg-zinc-50/50 border border-zinc-100 p-5">
+                    <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
+                        <div className="group relative shrink-0">
+                            <div className="absolute -inset-1 rounded-2xl bg-zinc-200/50 opacity-0 group-hover:opacity-100 blur-sm transition-all duration-300" />
+                            <Image
+                                src="/me.png"
+                                alt="Vivek Upasani"
+                                width={64}
+                                height={64}
+                                className="relative rounded-xl h-16 w-16 ring-1 ring-zinc-200 object-cover transition-transform duration-300 group-hover:scale-[1.03]"
                             />
-                            <polygon
-                                fill="#fff"
-                                points="21.396,31.255 14.899,24.76 17.021,22.639 21.428,27.046 30.996,17.772 33.084,19.926"
-                            />
-                        </svg>
-                    </h1>
-                    <p className="text-zinc-500 mt-1 text-[15px]">
-                        21 y/o engineer, indie hacker
-                    </p>
-                </motion.div>
+                        </div>
 
-                {/* ── Currently ── */}
-                <motion.div variants={fadeUp} className="mt-8">
-                    <Title title="currently" />
-                    <p className="mt-4 text-zinc-600 leading-relaxed text-[15px]">
-                        I&apos;m currently working as a freelance web developer. Previously, I completed a software engineering internship.
-                        {/* <span className="inline md:hidden">.</span> */}
-                        {/* <span className="hidden md:inline">
-                            {" "}I'm also building{" "}
-                            <Link
-                                href="https://app.cluezy.site"
-                                className="text-blue-600 hover:underline font-medium"
-                                target="_blank"
-                            >
-                                @cluezy
-                            </Link>
-                            {" "} an agentic AI research engine, and{" "}
-                            <Link
-                                href="https://github.com/vivekupasani/whispy"
-                                className="text-blue-600 hover:underline font-medium"
-                                target="_blank"
-                            >
-                                @whispy
-                            </Link> 
-                            {" "} an AI powered voice dictation app.
-                        </span> */}
-                    </p>
-                </motion.div>
+                        <div>
+                            <h1 className="text-xl font-medium text-zinc-500">
+                                vivek upasani
+                            </h1>
+                            <p className="text-zinc-400 text-sm mt-0.5">
+                                software engineer <span className="font-bold">&middot;</span> open to work
+                            </p>
+                        </div>
+                    </div>
 
-                {/* ── Work ── */}
-                <motion.div variants={fadeUp} className="mt-8">
-                    <Title title="where i've worked" href="/work" />
-                    <div className="flex flex-col gap-1 mt-5">
-                        {WorkList.slice(0, 4).map((work, idx) => (
-                            <WorkedAt
-                                key={idx}
-                                work={work}
-                            />
-                        ))}
+                    <div className="h-px bg-zinc-200/50 my-4" />
+
+                    <div className="flex flex-col gap-1">
+                        <span className="font-mono text-[10px] tracking-[0.15em] uppercase text-zinc-300">currently</span>
+                        <p className="text-[14px] text-zinc-500 leading-relaxed">
+                            I'm currently working as a freelance web developer. I design and build products from start to finish, craft clean interfaces, thoughtful typography, and software that feels refined.
+                        </p>
                     </div>
                 </motion.div>
 
-                {/* ── Projects ── */}
                 <motion.div variants={fadeUp} className="mt-8">
-                    <Title title="selected projects" href="/projects" />
-                    <div className="flex flex-col gap-1 mt-5">
-                        {ClientProjectList.slice(0, 3).map((project, idx) => (
-                            <ProjectTile
-                                key={idx}
-                                project={project}
-                            />
-                        ))}
+                    <div className="rounded-xl border border-zinc-100 bg-zinc-50/50 p-4">
+                        <Title title="where i've worked" href="/work" />
+                        <div className="flex flex-col gap-0.5 mt-3">
+                            {WorkList.slice(0, 4).map((work, idx) => (
+                                <WorkedAt key={idx} work={work} />
+                            ))}
+                        </div>
                     </div>
                 </motion.div>
 
-
-                {/* ── Skills ── */}
-                <motion.div variants={fadeUp} className="mt-8">
-                    <Title title="tech stack" />
-                    <p className="mt-4 font-mono text-[12px] text-zinc-500 leading-relaxed flex flex-wrap gap-2">
-                        {Skills.map((skill, idx) => (
-                            <span key={idx} className="border-2 border-dotted rounded-md px-2">
-                                {skill}
-                            </span>
-                        ))}
-                    </p>
+                <motion.div variants={fadeUp} className="mt-6">
+                    <div className="rounded-xl border border-zinc-100 bg-zinc-50/50 p-4">
+                        <Title title="selected projects" href="/projects" />
+                        <div className="flex flex-col gap-0.5 mt-3">
+                            {ClientProjectList.slice(0, 3).map((project, idx) => (
+                                <ProjectTile key={idx} project={project} />
+                            ))}
+                        </div>
+                    </div>
                 </motion.div>
 
-                <Footer />
+                <motion.div variants={fadeUp} className="mt-6">
+                    <div className="rounded-xl border border-zinc-100 bg-zinc-50/50 p-4">
+                        <Title title="tech stack" />
+                        <div className="flex flex-wrap gap-1.5 mt-3">
+                            {Skills.map((skill, idx) => (
+                                <span
+                                    key={idx}
+                                    className="text-[13px] text-zinc-500 px-2.5 py-1 rounded-md bg-white border border-zinc-100 transition-all duration-200 hover:bg-zinc-100 hover:text-zinc-800 hover:border-zinc-200"
+                                >
+                                    {skill}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                </motion.div>
+
             </motion.div>
         </section>
     );

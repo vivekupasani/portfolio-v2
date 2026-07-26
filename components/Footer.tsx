@@ -24,36 +24,31 @@ export function Footer() {
     return (
         <motion.div
             variants={fadeUp}
-            className="mt-10 pb-12 flex flex-col items-center gap-8"
+            className="mt-16 pb-12 flex flex-col items-center gap-6"
         >
-            <div  className="w-[80%] flex justify-center items-center border border-zinc-200/50 mt-4"/>
-            {/* <div className="flex flex-wrap justify-center gap-6 text-[15px] font-medium text-zinc-600">
-                <Link href="/" className="hover:text-zinc-900 transition-colors">Home</Link>
-                <Link href="/projects" className="hover:text-zinc-900 transition-colors">Projects</Link>
-                <Link href="/work" className="hover:text-zinc-900 transition-colors">Work</Link>
-            </div> */}
+            <div className="w-full h-px bg-zinc-100" />
 
-            <div className="flex gap-6 text-zinc-500">
-                <Link href="https://x.com/v1vekupasani" target="_blank" className="hover:text-zinc-900 transition-colors">
-                    <XIcon className="h-5 w-5" />
+            <div className="flex gap-5 text-zinc-400">
+                <Link href="https://x.com/v1vekupasani" target="_blank" className="hover:text-zinc-800 transition-colors duration-200">
+                    <XIcon className="h-4 w-4" />
                     <span className="sr-only">X (Twitter)</span>
                 </Link>
-                <Link href="https://github.com/vivekupasani" target="_blank" className="hover:text-zinc-900 transition-colors">
-                    <Github className="h-5 w-5" />
+                <Link href="https://github.com/vivekupasani" target="_blank" className="hover:text-zinc-800 transition-colors duration-200">
+                    <Github className="h-4 w-4" />
                     <span className="sr-only">GitHub</span>
                 </Link>
-                <Link href="https://linkedin.com/in/vivekupasani" target="_blank" className="hover:text-zinc-900 transition-colors">
-                    <Linkedin className="h-5 w-5" />
+                <Link href="https://linkedin.com/in/vivekupasani" target="_blank" className="hover:text-zinc-800 transition-colors duration-200">
+                    <Linkedin className="h-4 w-4" />
                     <span className="sr-only">LinkedIn</span>
                 </Link>
-                <Link href="/Vivek_Upasani_Resume.pdf" target="_blank" className="hover:text-zinc-900 transition-colors">
-                    <FileText className="h-5 w-5" />
+                <Link href="/Vivek_Upasani_Resume.pdf" target="_blank" className="hover:text-zinc-800 transition-colors duration-200">
+                    <FileText className="h-4 w-4" />
                     <span className="sr-only">Resume</span>
                 </Link>
             </div>
 
-            <p className="text-[13px] text-zinc-500">
-                &copy; {new Date().getFullYear()} Vivek Upasani. All rights reserved.
+            <p className="text-[12px] text-zinc-300">
+                &copy; {new Date().getFullYear()} Vivek Upasani
             </p>
         </motion.div>
     );

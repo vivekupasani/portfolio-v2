@@ -1,14 +1,12 @@
 "use client";
 
 import { motion, Variants } from "motion/react";
-import Image from "next/image";
 import Link from "next/link";
 import { useParams, notFound } from "next/navigation";
-import { ArrowLeft, ExternalLink, MapPin } from "lucide-react";
+import { ArrowLeft, MapPin } from "lucide-react";
 
 import { WorkList } from "@/lib/utils/work";
 import { Title } from "@/components/Title";
-import { Footer } from "@/components/Footer";
 
 const container: Variants = {
     hidden: { opacity: 0 },
@@ -22,12 +20,12 @@ const container: Variants = {
 };
 
 const fadeUp: Variants = {
-    hidden: { opacity: 0, y: 16, filter: "blur(8px)" },
+    hidden: { opacity: 0, y: 20, filter: "blur(6px)" },
     show: {
         opacity: 1,
         y: 0,
         filter: "blur(0px)",
-        transition: { duration: 0.55, ease: [0.25, 0.46, 0.45, 0.94] },
+        transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
     },
 };
 
@@ -41,91 +39,69 @@ export function WorkDetails() {
     }
 
     return (
-        <section className="bg-zinc-50 text-zinc-900 min-h-svh">
+        <section className="bg-white text-zinc-900 min-h-svh">
             <motion.div
                 variants={container}
                 initial="hidden"
                 animate="show"
-                className="flex flex-col font-sans py-10 px-6 md:px-0 max-w-xl mx-auto"
+                className="flex flex-col font-sans pt-16 px-6 md:px-0 max-w-xl mx-auto"
             >
-                {/* Back Link */}
-                {/* <div>
+                <motion.div variants={fadeUp}>
                     <Link
                         href="/work"
-                        className="inline-flex items-center gap-2 font-mono text-zinc-400 hover:text-zinc-900 transition-colors text-[13px] mb-8 group"
+                        className="inline-flex items-center gap-1 text-zinc-500 hover:text-zinc-700 transition-colors text-sm"
                     >
-                        ← go back
+                        <ArrowLeft size={13} />
+                        work
                     </Link>
-                </div> */}
+                </motion.div>
 
-                {/* Header */}
-                <motion.div variants={fadeUp} className="flex items-start justify-between mt-2">
-                    <div className="flex flex-col">
-                        <h1 className="text-3xl font-semibold tracking-tight">
+                <motion.div variants={fadeUp} className="mt-6 rounded-xl bg-zinc-50/50 border border-zinc-100 p-5">
+                    <div className="flex flex-col gap-1">
+                        <h1 className="text-xl font-medium text-zinc-500">
                             {work.companyName}
                         </h1>
-                        <p className="text-zinc-600 mt-2 text-[17px] font-medium">
+                        <p className="text-zinc-500 text-sm">
                             {work.role}
                         </p>
-                        <div className="flex items-center gap-2 text-zinc-500 mt-2 text-sm">
-                            <MapPin size={14} />
+                        <div className="flex items-center gap-1.5 text-zinc-500 mt-0.5 text-sm">
+                            <MapPin size={12} />
                             {work.location}
                         </div>
                     </div>
-                    {/* <div className="relative shrink-0">
-                        <Image
-                            src={work.imageSrc}
-                            alt={work.companyName}
-                            width={64}
-                            height={64}
-                            className="rounded-xl size-16 ring-1 ring-zinc-200 shadow-sm object-cover"
-                        />
-                    </div> */}
                 </motion.div>
 
-                {/* Tech Stack */}
-                <motion.div variants={fadeUp} className="mt-8">
-                    <Title title="technologies" />
-                    <div className="flex flex-wrap gap-2 mt-4">
-                        {work.techStack.map((tech) => (
-                            <span
-                                key={tech}
-                                className="px-3 py-1 bg-zinc-100 border border-zinc-200 text-zinc-600 rounded-full text-[12px] font-medium"
-                            >
-                                {tech}
-                            </span>
-                        ))}
+                <motion.div variants={fadeUp} className="mt-6">
+                    <div className="rounded-xl border border-zinc-100 bg-zinc-50/50 p-4">
+                        <Title title="technologies" />
+                        <div className="flex flex-wrap gap-1.5 mt-3">
+                            {work.techStack.map((tech) => (
+                                <span
+                                    key={tech}
+                                    className="px-2.5 py-1 bg-white border border-zinc-100 text-zinc-500 rounded-md text-[11px] transition-all duration-200 hover:bg-zinc-100 hover:text-zinc-700"
+                                >
+                                    {tech}
+                                </span>
+                            ))}
+                        </div>
                     </div>
                 </motion.div>
 
-                {/* Details */}
-                <motion.div variants={fadeUp} className="mt-12">
-                    <Title title="what i did" />
-                    <ul className="mt-4 space-y-3">
-                        {work.details.map((detail, idx) => (
-                            <li key={idx} className="flex items-start gap-4 text-zinc-600 text-[15px] leading-relaxed">
-                                <div className="mt-1.5 text-blue-500 font-mono text-[11px] tabular-nums shrink-0">
-                                    {(idx + 1).toString().padStart(2, "0")}
-                                </div>
-                                {detail}
-                            </li>
-                        ))}
-                    </ul>
+                <motion.div variants={fadeUp} className="mt-6">
+                    <div className="rounded-xl border border-zinc-100 bg-zinc-50/50 p-4">
+                        <Title title="what i did" />
+                        <ul className="mt-3 space-y-3">
+                            {work.details.map((detail, idx) => (
+                                <li key={idx} className="flex items-start gap-3 text-sm text-zinc-500 leading-relaxed">
+                                    <span className="mt-1 font-mono text-[10px] text-zinc-500 tabular-nums shrink-0 w-4 text-right">
+                                        {(idx + 1).toString().padStart(2, "0")}
+                                    </span>
+                                    {detail}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </motion.div>
-
-                {/* Website Link */}
-                {/* <motion.div variants={fadeUp} className="mt-16">
-                    <Link
-                        href={work.link}
-                        target="_blank"
-                        className="inline-flex items-center gap-2 text-zinc-500 hover:text-zinc-900 transition-colors text-sm font-medium"
-                    >
-                        Visit Website
-                        <ExternalLink size={14} />
-                    </Link>
-                </motion.div> */}
-
-                <Footer />
             </motion.div>
         </section>
     );
