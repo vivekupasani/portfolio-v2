@@ -37,7 +37,7 @@ export function Nav() {
               {isActive && (
                 <motion.div
                   layoutId="active"
-                  className="absolute inset-0 bg-zinc-100 rounded-2xl"
+                  className="absolute inset-0 bg-zinc-100 rounded-xl md:rounded-2xl"
                   transition={{ type: "spring", stiffness: 400, damping: 30 }}
                 />
               )}
