@@ -7,8 +7,6 @@ export const Skills: string[] = [
     "react.js",
     "next.js",
     "tanstack query",
-    "tanstack router",
-    "tanstack start",
     "tailwind css",
     "motion",
     "shadcn",
@@ -16,7 +14,6 @@ export const Skills: string[] = [
 
     // Mobile
     "react native",
-    "flutter",
 
     // Backend
     "node.js",
