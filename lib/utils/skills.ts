@@ -8,9 +8,6 @@ export const Skills: string[] = [
     "next.js",
     "tanstack query",
     "tailwind css",
-    "motion",
-    "shadcn",
-    "aceternity",
 
     // Mobile
     "react native",
@@ -19,16 +16,20 @@ export const Skills: string[] = [
     "node.js",
     "express.js",
     "drizzle",
+    "bullmq",
 
     // Databases
     "postgresql",
     "mysql",
+    "redis",
     "mongo db",
     "firebase",
     "supabase",
     "neon db",
-    "redis",
     "upstash",
+
+    // DevOps / Infrastructure
+    "docker",
 
     // Tools
     "git",
@@ -39,7 +40,5 @@ export const Skills: string[] = [
     // Deployment / Platforms
     "vercel",
     "render",
-
-    // Misc / Fun
-    "antigravity"
-]
+    "railway",
+];
